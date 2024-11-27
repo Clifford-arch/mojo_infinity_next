@@ -1,0 +1,397 @@
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import "bootstrap/dist/css/bootstrap.min.css";
+import dynamic from "next/dynamic";
+import { useState } from "react";
+import SidebarLeft from "./MojoInfinity/SidebarLeft";
+
+export default function Header({ onOpenLeftSidebar, onOpenRightSidebar }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  return (
+    <>
+      <header
+        id="mm-header"
+        className="sticky-top"
+        suppressHydrationWarning={true}
+      >
+        <div className="header-wrapper">
+          <button className="openbtnleft" onClick={onOpenLeftSidebar}>
+            <img
+              src="https://sandbox-st.mojoinfinity.com/images/mojoinfinity.svg"
+              alt="hamburger"
+            />
+          </button>
+          <h1>
+            <Link
+              href="/"
+              // href="/hni/landing"
+              className="mm-logo"
+            >
+              <img
+                src="https://sandbox-st.mojoinfinity.com/images/mojoinfinity.svg"
+                alt="logo"
+              />
+            </Link>
+          </h1>
+          <nav className="links">
+            <ul className="main-nav d-none">
+              <li className="top-level-link current">
+                <a className="mega-menu">
+                  <span>
+                    Stocks <i className="arrow down"></i>
+                  </span>
+                </a>
+                <div className="sub-menu-block">
+                  <div className="row-wrapper">
+                    <div className="row-list">
+                      <div className="nav-content">
+                        <a href="#">
+                          <div className="nav-heading">
+                            Markets Today{" "}
+                            <img
+                              alt=""
+                              className="right--arrow"
+                              src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                            />
+                          </div>
+                          <div className="nav-subheading">
+                            {" "}
+                            Monitor Indices, Stocks and News Real-time
+                          </div>
+                        </a>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Stocks Research{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Real-time Research on All 4000 Stocks{" "}
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Result Corner{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Company Results and Financial Trend
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          IPO Analysis{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading"> Analysis of IPOs </div>
+                      </div>
+                    </div>
+                    <div className="row-list">
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Global Stock Research{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          Invest Globally, with Confidence{" "}
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          LIVE Events{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Learn from the Pros{" "}
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Watchlist{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Your Stock Favourites{" "}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row-list">
+                      <div className="nav-card">
+                        <p>Dear Ansha,</p>
+                        <p>
+                          {" "}
+                          Extend your Mojo Pro Subscription and avail free MF
+                          Transactions till your subscription expires!{" "}
+                        </p>
+                        <button
+                          className="nav-btn-white"
+                          style={{ marginTop: "20px" }}
+                        >
+                          Extend Now!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className="top-level-link menu-highlight">
+                <a className="mega-menu">
+                  <span>
+                    Professional <i className="arrow down"></i>
+                  </span>
+                </a>
+                <div className="sub-menu-block">
+                  <div className="row-wrapper">
+                    <div className="row-list">
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          Explore Professional{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          India's No. 1 Stock Advisory Service{" "}
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          Stock Recommendations{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Real-Time Insights Into Over 4,000 Stocks!{" "}
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Top Stocks to Invest{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Grow Your Wealth with Mojo Stocks.{" "}
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Stock of the Month{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Make Smart Stock Moves with CIO Pick{" "}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row-list">
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Mutual Fund Research{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          Buy, Hold, Sell Mutual Fund Advisory{" "}
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Trading Calls{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Daily Technical Calls!
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          Research Report on all stocks{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Verdict: Instant Insights at Your Fingertips!
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Make your own Screener{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          {" "}
+                          Monitor your Investments!
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row-list">
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Replace your stocks with top stocks{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          Goodbye to Losers. Choose Winning Stocks.
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Model Portfolio{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          Zero Headache Model Portfolios
+                        </div>
+                      </div>
+                      <div className="nav-content">
+                        <div className="nav-heading">
+                          {" "}
+                          Portfolio Optimiser{" "}
+                          <img
+                            alt=""
+                            className="right--arrow"
+                            src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
+                          />
+                        </div>
+                        <div className="nav-subheading">
+                          Make Your Portfolio Better
+                        </div>
+                      </div>
+                      <div className="nav-info-wrapper">
+                        <div className="nav-info-wrap-lft">
+                          <span>Upgrade to Professional</span>
+                          <div className="upgrade-price-wrap">
+                            <span className="upgrade-price-lft">₹19,999</span>
+                            <span className="upgrade-price-rht text-end">
+                              ₹14,999
+                            </span>
+                          </div>
+                        </div>
+                        <div className="nav-info-wrap-rht">
+                          <button className="nav-btn">Subscribe Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <nav className="main">
+            <ul>
+              <li className="user-login user-login-web">
+                <div className="dropdown">
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-primary register-btn"
+                  >
+                    Register
+                  </button>
+
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-primary login-btn"
+                  >
+                    Login
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      {isSidebarOpen ? (
+        <SidebarLeft
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
+        />
+      ) : (
+        <></>
+      )}
+    </>
+  );
+}
