@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "/mojo-infinity",
+        destination: "/landing",
         permanent: true,
       },
     ];
