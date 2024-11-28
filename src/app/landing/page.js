@@ -1,12 +1,35 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FeatureBox from "../../../components/MojoInfinity/FeatureBox";
 import SidebarLeft from "../../../components/MojoInfinity/SidebarLeft";
 import FAQSection from "../../../components/MojoInfinity/FAQSection";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
 const page = () => {
   // const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const [redirectUrl, setRedirectUrl] = useState("");
+  const [nextStep, setNextStep] = useState("");
+
+  useEffect(() => {
+    const checkLogin = async () => {
+      try {
+        const response = await axios.get(
+          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login"
+        );
+        if (response.data.code === 200) {
+          setIsLogin(response.data.data.is_login);
+          setRedirectUrl(response.data.data.redirect_url);
+          setNextStep(response.data.data.next_step);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    checkLogin();
+  }, []);
   return (
     <>
       <section className="infinity-landing bannerwrapper">
@@ -42,21 +65,27 @@ const page = () => {
               title="Mojo Flagship"
               description="Discover our tailored portfolios to diversify and grow your investments. Find the approach that fits your goals!"
               minInvestment="₹2 Lacs"
-              isLogin={true}
+              isLogin={isLogin}
+              redirectUrl={redirectUrl} // Pass the redirect URL to the FeatureBox
+              nextStep={nextStep}
             />
             <FeatureBox
               number="02"
               title="Pick your Mojo Strategy"
               description="Choose from MOJO ONE strategies for a balanced mix of quality stocks and market opportunities. Tailor your investment to fit your goals!"
               minInvestment="₹2 Lacs"
-              isLogin={false}
+              isLogin={isLogin}
+              redirectUrl={redirectUrl} // Pass the redirect URL to the FeatureBox
+              nextStep={nextStep}
             />
             <FeatureBox
               number="03"
               title="Be your own Fund Manager"
               description="Customize your investments by setting specific entry and exit parameters for stocks. Create a portfolio that perfectly matches your strategy and financial goals.!"
               minInvestment="₹10 Lacs"
-              isLogin={true}
+              isLogin={isLogin}
+              redirectUrl={redirectUrl} // Pass the redirect URL to the FeatureBox
+              nextStep={nextStep}
             />
           </div>
         </div>
