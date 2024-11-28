@@ -42,18 +42,21 @@ const page = () => {
               title="Mojo Flagship"
               description="Discover our tailored portfolios to diversify and grow your investments. Find the approach that fits your goals!"
               minInvestment="₹2 Lacs"
+              isLogin={true}
             />
             <FeatureBox
               number="02"
               title="Pick your Mojo Strategy"
               description="Choose from MOJO ONE strategies for a balanced mix of quality stocks and market opportunities. Tailor your investment to fit your goals!"
               minInvestment="₹2 Lacs"
+              isLogin={false}
             />
             <FeatureBox
               number="03"
               title="Be your own Fund Manager"
               description="Customize your investments by setting specific entry and exit parameters for stocks. Create a portfolio that perfectly matches your strategy and financial goals.!"
               minInvestment="₹10 Lacs"
+              isLogin={true}
             />
           </div>
         </div>
