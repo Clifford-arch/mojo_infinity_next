@@ -73,7 +73,7 @@ const page = () => {
               description="Discover our tailored portfolios to diversify and grow your investments. Find the approach that fits your goals!"
               minInvestment="₹2 Lacs"
               isLogin={isLogin}
-              redirectUrl={redirectUrl} // Pass the redirect URL to the FeatureBox
+              redirectUrl="https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=1"
               nextStep={nextStep}
             />
             <FeatureBox
@@ -82,7 +82,7 @@ const page = () => {
               description="Choose from MOJO ONE strategies for a balanced mix of quality stocks and market opportunities. Tailor your investment to fit your goals!"
               minInvestment="₹2 Lacs"
               isLogin={isLogin}
-              redirectUrl={redirectUrl} // Pass the redirect URL to the FeatureBox
+              redirectUrl="https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=2"
               nextStep={nextStep}
             />
             <FeatureBox
@@ -91,7 +91,7 @@ const page = () => {
               description="Customize your investments by setting specific entry and exit parameters for stocks. Create a portfolio that perfectly matches your strategy and financial goals.!"
               minInvestment="₹10 Lacs"
               isLogin={isLogin}
-              redirectUrl={redirectUrl} // Pass the redirect URL to the FeatureBox
+              redirectUrl="https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=3"
               nextStep={nextStep}
             />
           </div>

@@ -4,6 +4,7 @@ export default function FeatureBox({
   description,
   minInvestment,
   isLogin,
+  redirectUrl,
 }) {
   return (
     <div className="col-12 col-md-4 col-lg-4">
@@ -15,13 +16,17 @@ export default function FeatureBox({
         </div>
         <div className="feature-footer">
           {isLogin ? (
-            <a type="button" href="/sample" className="btn btn-sm btn-primary">
+            <a
+              type="button"
+              href={redirectUrl}
+              className="btn btn-sm btn-primary"
+            >
               Get Started
             </a>
           ) : (
             <a
               type="button"
-              href="https://sandbox.mojoinfinity.com/mojo/login?redirect=/hni/landing"
+              href="https://sandbox.mojoinfinity.com/mojo/login?redirect=/landing"
               className="btn btn-sm btn-primary"
             >
               Get Started
