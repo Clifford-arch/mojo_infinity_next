@@ -16,7 +16,14 @@ const page = () => {
     const checkLogin = async () => {
       try {
         const response = await axios.get(
-          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login"
+          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            withCredentials: true,
+          }
         );
         if (response.data.code === 200) {
           setIsLogin(response.data.data.is_login);
