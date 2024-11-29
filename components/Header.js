@@ -3,11 +3,45 @@ import Link from "next/link";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SidebarLeft from "./MojoInfinity/SidebarLeft";
+import logout from "../api/logout";
+import axios from "axios";
+export default function Header({ onOpenLeftSidebar }) {
+  const [isLogin, setIsLogin] = useState(true);
+  const [profile, setProfile] = useState(false);
 
-export default function Header({ onOpenLeftSidebar, onOpenRightSidebar }) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleProfile = () => {
+    setProfile((prev) => !prev);
+  };
+  const handleLogout = async () => {
+    try {
+      const response = await logout();
+      if (response.code === 200) {
+        setIsLogin(false);
+      }
+    } catch (error) {
+      // console.error("Logout error:", error);
+      throw error;
+    }
+  };
+
+  useEffect(() => {
+    const checkLogin = async () => {
+      try {
+        const response = await axios.get(
+          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login"
+        );
+        if (response.data.code === 200) {
+          setIsLogin(response.data.data.is_login);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    checkLogin();
+  }, []);
 
   return (
     <>
@@ -361,9 +395,49 @@ export default function Header({ onOpenLeftSidebar, onOpenRightSidebar }) {
               </li>
             </ul>
           </nav>
-          <nav className="main">
+          {/* <nav className="main">
             <ul>
               <li className="user-login user-login-web">
+                <div className="dropdown">
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-primary register-btn"
+                    onClick={()=>{window.location.href=''}}
+                  >
+                    Register
+                  </button>
+
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-primary login-btn"
+                  >
+                    Login
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </nav> */}
+
+          {/* <nav className="main">
+            <ul>
+              <li className="user-login user-login-web">
+                <div className="dropdown">
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-primary login-btn"
+                  >
+                    Register
+                  </button>
+
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-primary register-btn"
+                  >
+                    Login
+                  </button>
+                </div>
+              </li>
+              <li className="user-login user-login-mobile">
                 <div className="dropdown">
                   <button
                     type="button"
@@ -382,16 +456,161 @@ export default function Header({ onOpenLeftSidebar, onOpenRightSidebar }) {
               </li>
             </ul>
           </nav>
+
+          <nav className="main">
+            <ul>
+              <li className="user-login user-login-web">
+                <div className="dropdown">
+                  <button
+                    className="openbtnright"
+                    fdprocessedid="q3fnp4"
+                    onClick={toggleProfile}
+                  >
+                    <img
+                      alt="logo"
+                      src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                    />
+                  </button>
+                  {profile && (
+                    <div className="mm-dropdown-content">
+                      <a>Member Details</a>
+                      <a>Brokerage Details</a>
+                      <a>Residential Status</a>
+                      <a>Negative List</a>
+                      <a>Invoice</a>
+                      <a>Feedback</a>
+                      <a>Logout</a>
+                    </div>
+                  )}
+                </div>
+              </li>
+              <li className="user-login user-login-mobile">
+                <div className="dropdown">
+                  <button className="openbtnright" onClick={toggleProfile}>
+                    <img
+                      alt="logo"
+                      src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                    />
+                  </button>
+                  {profile && (
+                    <div className="mm-dropdown-content">
+                      <a>Member Details</a>
+                      <a>Brokerage Details</a>
+                      <a>Residential Status</a>
+                      <a>Negative List</a>
+                      <a>Invoice</a>
+                      <a>Feedback</a>
+                      <a>Logout</a>
+                    </div>
+                  )}
+                </div>
+              </li>
+            </ul>
+          </nav> */}
+          <nav className="main">
+            <ul>
+              {isLogin ? (
+                // User profile section
+                <>
+                  <li className="user-login user-login-web">
+                    <div className="dropdown">
+                      <button
+                        className="openbtnright"
+                        fdprocessedid="q3fnp4"
+                        onClick={toggleProfile}
+                      >
+                        <img
+                          alt="logo"
+                          src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                        />
+                      </button>
+                      {profile && (
+                        <div className="mm-dropdown-content">
+                          <a>Member Details</a>
+                          <a>Brokerage Details</a>
+                          <a>Residential Status</a>
+                          <a>Negative List</a>
+                          <a>Invoice</a>
+                          <a>Feedback</a>
+                          <a onClick={handleLogout}>Logout</a>
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                  <li className="user-login user-login-mobile">
+                    <div className="dropdown">
+                      <button className="openbtnright" onClick={toggleProfile}>
+                        <img
+                          alt="logo"
+                          src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                        />
+                      </button>
+                      {profile && (
+                        <div className="mm-dropdown-content">
+                          <a>Member Details</a>
+                          <a>Brokerage Details</a>
+                          <a>Residential Status</a>
+                          <a>Negative List</a>
+                          <a>Invoice</a>
+                          <a>Feedback</a>
+                          <a onClick={handleLogout}>Logout</a>
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                </>
+              ) : (
+                // Login/Register buttons
+                <>
+                  <li className="user-login user-login-web">
+                    <div className="dropdown">
+                      <button
+                        type="button"
+                        className="btn btn-sm btn-primary register-btn"
+                        onClick={() =>
+                          (window.location.href = "/user/register")
+                        }
+                      >
+                        Register
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-sm btn-primary login-btn"
+                        onClick={() => (window.location.href = "/user/login")}
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </li>
+                  <li className="user-login user-login-mobile">
+                    <div className="dropdown">
+                      <button
+                        type="button"
+                        className="btn btn-sm btn-primary register-btn"
+                        onClick={() =>
+                          (window.location.href = "/user/register")
+                        }
+                      >
+                        Register
+                      </button>
+
+                      <button
+                        type="button"
+                        className="btn btn-sm btn-primary login-btn"
+                        onClick={() =>
+                          (window.location.href = "/user/register")
+                        }
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </li>
+                </>
+              )}
+            </ul>
+          </nav>
         </div>
       </header>
-      {isSidebarOpen ? (
-        <SidebarLeft
-          isOpen={isSidebarOpen}
-          onClose={() => setIsSidebarOpen(false)}
-        />
-      ) : (
-        <></>
-      )}
     </>
   );
 }
