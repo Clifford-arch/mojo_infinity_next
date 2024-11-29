@@ -8,7 +8,7 @@ import SidebarLeft from "./MojoInfinity/SidebarLeft";
 import logout from "../api/logout";
 import axios from "axios";
 export default function Header({ onOpenLeftSidebar }) {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [profile, setProfile] = useState(false);
 
   const toggleProfile = () => {
