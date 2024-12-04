@@ -1,7 +1,10 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../style/header.css";
+import "../style/infinity-header.css";
+
+// import "bootstrap/dist/css/bootstrap.min.css";
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import SidebarLeft from "./MojoInfinity/SidebarLeft";
@@ -72,7 +75,7 @@ export default function Header({ onOpenLeftSidebar }) {
           <nav className="links">
             <ul className="main-nav d-none">
               <li className="top-level-link current">
-                <a className="mega-menu">
+                <a href="/" className="mega-menu">
                   <span>
                     Stocks <i className="arrow down"></i>
                   </span>
@@ -205,7 +208,7 @@ export default function Header({ onOpenLeftSidebar }) {
                 </div>
               </li>
               <li className="top-level-link menu-highlight">
-                <a className="mega-menu">
+                <a className="mega-menu" href="/">
                   <span>
                     Professional <i className="arrow down"></i>
                   </span>

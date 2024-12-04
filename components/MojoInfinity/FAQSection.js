@@ -679,6 +679,7 @@ const FAQSection = () => {
                     <a
                       className={selectedSection === index ? "active" : ""}
                       onClick={() => handleSectionClick(index)}
+                      href=""
                     >
                       {section.title}
                     </a>
