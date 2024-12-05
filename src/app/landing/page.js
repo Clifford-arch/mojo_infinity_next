@@ -118,7 +118,7 @@ const Page = () => {
       <section className="infinity-landing">
         <div className="container">
           <h2 className="text-center">How to get started?</h2>
-          <div className="steps d-flex flex-wrap justify-content-between padding-top-2x padding-bottom-1x">
+          <div className="steps d-flex  flex-sm-nowrap flex-wrap justify-content-between padding-top-2x padding-bottom-1x">
             {[
               {
                 title: "Sign up and Complete your KYC",
