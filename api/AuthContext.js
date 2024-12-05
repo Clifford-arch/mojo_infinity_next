@@ -10,6 +10,7 @@ export function AuthProvider({ children }) {
   const [nextStep, setNextStep] = useState("");
   const [loading, setLoading] = useState(true);
 
+  // Function to check if the user is logged in
   const checkLogin = async () => {
     setLoading(true);
     try {
@@ -27,6 +28,12 @@ export function AuthProvider({ children }) {
         setIsLogin(response.data.data.is_login);
         setRedirectUrl(response.data.data.redirect_url);
         setNextStep(response.data.data.next_step);
+        // Store login status in localStorage for persistence
+        if (response.data.data.is_login) {
+          localStorage.setItem("isLogin", "true");
+        } else {
+          localStorage.removeItem("isLogin");
+        }
       }
     } catch (error) {
       console.log("Error checking login:", error);
@@ -35,8 +42,15 @@ export function AuthProvider({ children }) {
     }
   };
 
+  // Check login status on initial load and when reloading the page
   useEffect(() => {
-    checkLogin();
+    const storedLoginStatus = localStorage.getItem("isLogin");
+    if (storedLoginStatus === "true") {
+      setIsLogin(true);
+      setLoading(false); // Set loading to false immediately if already logged in
+    } else {
+      checkLogin();
+    }
   }, []);
 
   return (

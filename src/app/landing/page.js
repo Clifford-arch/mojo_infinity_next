@@ -79,8 +79,7 @@ const Page = () => {
                 description:
                   "Discover our tailored portfolios to diversify and grow your investments. Find the approach that fits your goals!",
                 minInvestment: "₹2 Lacs",
-                redirectUrl:
-                  "https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=1",
+                url: "https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=1",
               },
               {
                 number: "02",
@@ -88,8 +87,7 @@ const Page = () => {
                 description:
                   "Choose from MOJO ONE strategies for a balanced mix of quality stocks and market opportunities. Tailor your investment to fit your goals!",
                 minInvestment: "₹2 Lacs",
-                redirectUrl:
-                  "https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=2",
+                url: "https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=2",
               },
               {
                 number: "03",
@@ -97,8 +95,7 @@ const Page = () => {
                 description:
                   "Customize your investments by setting specific entry and exit parameters for stocks. Create a portfolio that perfectly matches your strategy and financial goals!",
                 minInvestment: "₹10 Lacs",
-                redirectUrl:
-                  "https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=3",
+                url: "https://sandboxwealth-www.mojoinfinity.com/invest-strategy/invest?plan=3",
               },
             ].map((feature, index) => (
               <FeatureBox
@@ -106,6 +103,7 @@ const Page = () => {
                 {...feature}
                 isLogin={isLogin}
                 nextStep={nextStep}
+                redirectUrl={feature.url}
               />
             ))}
           </div>

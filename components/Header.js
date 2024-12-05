@@ -4,7 +4,6 @@ import Image from "next/image";
 import "../style/header.css";
 import "../style/infinity-header.css";
 
-
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import SidebarLeft from "./MojoInfinity/SidebarLeft";
@@ -14,6 +13,10 @@ import { useAuth } from "../api/AuthContext";
 export default function Header({ onOpenLeftSidebar }) {
   const { isLogin, setIsLogin } = useAuth();
   const [profile, setProfile] = useState(false);
+
+  const toggleProfile = () => {
+    setProfile((prev) => !prev);
+  };
 
   const handleLogout = async () => {
     try {
