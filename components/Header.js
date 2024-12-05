@@ -10,13 +10,11 @@ import { useState, useEffect } from "react";
 import SidebarLeft from "./MojoInfinity/SidebarLeft";
 import logout from "../api/logout";
 import axios from "axios";
+import { useAuth } from "../api/AuthContext";
 export default function Header({ onOpenLeftSidebar }) {
-  const [isLogin, setIsLogin] = useState(false);
+  const { isLogin, setIsLogin } = useAuth();
   const [profile, setProfile] = useState(false);
 
-  const toggleProfile = () => {
-    setProfile((prev) => !prev);
-  };
   const handleLogout = async () => {
     try {
       const response = await logout();
@@ -24,36 +22,35 @@ export default function Header({ onOpenLeftSidebar }) {
         setIsLogin(false);
       }
     } catch (error) {
-      // console.error("Logout error:", error);
       throw error;
     }
   };
 
-  useEffect(() => {
-    const checkLogin = async () => {
-      try {
-        const response = await axios.get(
-          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json",
-            },
-            withCredentials: true,
-          }
-        );
-        console.log('Response Next: ', response.data.data, response.data.code);
-        if (response.data.code == 200) {
-          console.log('Is Login Next: ', response.data.data.is_login);
-          setIsLogin(response.data.data.is_login);
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  // useEffect(() => {
+  //   const checkLogin = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
+  //         {
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //             "Accept": "application/json",
+  //           },
+  //           withCredentials: true,
+  //         }
+  //       );
+  //       console.log('Response Next: ', response.data.data, response.data.code);
+  //       if (response.data.code == 200) {
+  //         console.log('Is Login Next: ', response.data.data.is_login);
+  //         setIsLogin(response.data.data.is_login);
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
 
-    checkLogin();
-  }, []);
+  //   checkLogin();
+  // }, []);
 
   return (
     <>

@@ -8,45 +8,42 @@ import axios from "axios";
 import Image from "next/image";
 import "@/../style/kyc.css";
 import "@/../style/landing.css";
+import { useAuth } from "../../../api/AuthContext";
 
 const Expertise = React.lazy(() =>
   import("../../../components/MojoInfinity/Expertise")
 );
 
 const Page = () => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [redirectUrl, setRedirectUrl] = useState("");
-  const [nextStep, setNextStep] = useState("");
-  const [loading, setLoading] = useState(true); // Loading state for login check
+  const { isLogin, redirectUrl, nextStep, loading } = useAuth();
+  // useEffect(() => {
+  //   const checkLogin = async () => {
+  //     setLoading(true);
+  //     try {
+  //       const response = await axios.get(
+  //         "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
+  //         {
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //             Accept: "application/json",
+  //           },
+  //           withCredentials: true,
+  //         }
+  //       );
+  //       if (response.data.code === 200) {
+  //         setIsLogin(response.data.data.is_login);
+  //         setRedirectUrl(response.data.data.redirect_url);
+  //         setNextStep(response.data.data.next_step);
+  //       }
+  //     } catch (error) {
+  //       console.log("Error checking login:", error);
+  //     } finally {
+  //       setLoading(false); // Stop loading after the check
+  //     }
+  //   };
 
-  useEffect(() => {
-    const checkLogin = async () => {
-      setLoading(true);
-      try {
-        const response = await axios.get(
-          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            withCredentials: true,
-          }
-        );
-        if (response.data.code === 200) {
-          setIsLogin(response.data.data.is_login);
-          setRedirectUrl(response.data.data.redirect_url);
-          setNextStep(response.data.data.next_step);
-        }
-      } catch (error) {
-        console.log("Error checking login:", error);
-      } finally {
-        setLoading(false); // Stop loading after the check
-      }
-    };
-
-    checkLogin();
-  }, []);
+  //   checkLogin();
+  // }, []);
 
   return (
     <>
