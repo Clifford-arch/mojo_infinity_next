@@ -4,7 +4,7 @@ import Image from "next/image";
 import "../style/header.css";
 import "../style/infinity-header.css";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
+
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import SidebarLeft from "./MojoInfinity/SidebarLeft";
@@ -20,7 +20,7 @@ export default function Header({ onOpenLeftSidebar }) {
   const handleLogout = async () => {
     try {
       const response = await logout();
-      if (response.code === 200) {
+      if (response.code == 200) {
         setIsLogin(false);
       }
     } catch (error) {
@@ -33,9 +33,18 @@ export default function Header({ onOpenLeftSidebar }) {
     const checkLogin = async () => {
       try {
         const response = await axios.get(
-          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login"
+          "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+            },
+            withCredentials: true,
+          }
         );
-        if (response.data.code === 200) {
+        console.log('Response Next: ', response.data.data, response.data.code);
+        if (response.data.code == 200) {
+          console.log('Is Login Next: ', response.data.data.is_login);
           setIsLogin(response.data.data.is_login);
         }
       } catch (error) {
@@ -398,118 +407,6 @@ export default function Header({ onOpenLeftSidebar }) {
               </li>
             </ul>
           </nav>
-          {/* <nav className="main">
-            <ul>
-              <li className="user-login user-login-web">
-                <div className="dropdown">
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-primary register-btn"
-                    onClick={()=>{window.location.href=''}}
-                  >
-                    Register
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-primary login-btn"
-                  >
-                    Login
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </nav> */}
-
-          {/* <nav className="main">
-            <ul>
-              <li className="user-login user-login-web">
-                <div className="dropdown">
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-primary login-btn"
-                  >
-                    Register
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-primary register-btn"
-                  >
-                    Login
-                  </button>
-                </div>
-              </li>
-              <li className="user-login user-login-mobile">
-                <div className="dropdown">
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-primary register-btn"
-                  >
-                    Register
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-primary login-btn"
-                  >
-                    Login
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </nav>
-
-          <nav className="main">
-            <ul>
-              <li className="user-login user-login-web">
-                <div className="dropdown">
-                  <button
-                    className="openbtnright"
-                    fdprocessedid="q3fnp4"
-                    onClick={toggleProfile}
-                  >
-                    <img
-                      alt="logo"
-                      src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
-                    />
-                  </button>
-                  {profile && (
-                    <div className="mm-dropdown-content">
-                      <a>Member Details</a>
-                      <a>Brokerage Details</a>
-                      <a>Residential Status</a>
-                      <a>Negative List</a>
-                      <a>Invoice</a>
-                      <a>Feedback</a>
-                      <a>Logout</a>
-                    </div>
-                  )}
-                </div>
-              </li>
-              <li className="user-login user-login-mobile">
-                <div className="dropdown">
-                  <button className="openbtnright" onClick={toggleProfile}>
-                    <img
-                      alt="logo"
-                      src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
-                    />
-                  </button>
-                  {profile && (
-                    <div className="mm-dropdown-content">
-                      <a>Member Details</a>
-                      <a>Brokerage Details</a>
-                      <a>Residential Status</a>
-                      <a>Negative List</a>
-                      <a>Invoice</a>
-                      <a>Feedback</a>
-                      <a>Logout</a>
-                    </div>
-                  )}
-                </div>
-              </li>
-            </ul>
-          </nav> */}
           <nav className="main">
             <ul>
               {isLogin ? (
