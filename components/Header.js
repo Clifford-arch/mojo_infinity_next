@@ -10,6 +10,7 @@ import SidebarLeft from "./MojoInfinity/SidebarLeft";
 import logout from "../api/logout";
 import axios from "axios";
 import { useAuth } from "../api/AuthContext";
+import useFetch from "../api/useFetch";
 export default function Header({ onOpenLeftSidebar }) {
   const { isLogin, setIsLogin } = useAuth();
   const [profile, setProfile] = useState(false);
@@ -18,14 +19,39 @@ export default function Header({ onOpenLeftSidebar }) {
     setProfile((prev) => !prev);
   };
 
+  // const handleLogout = async () => {
+  //   try {
+  //     const response = await logout();
+  //     if (response.code == 200) {
+  //       setIsLogin(false);
+  //     }
+  //   } catch (error) {
+  //     throw error;
+  //   }
+  // };
+
+  const { post, loading, error } = useFetch();
+
   const handleLogout = async () => {
+    const url = "https://sandboxwealth-frapi.mojoinfinity.com/users/logout";
+    const payload = {
+      code: 200,
+      message: "success",
+      data: {},
+    };
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      withCredentials: true,
+    };
+
     try {
-      const response = await logout();
-      if (response.code == 200) {
-        setIsLogin(false);
-      }
+      const response = await post(url, payload, config);
+      console.log("Logout successful:", response);
     } catch (error) {
-      throw error;
+      console.log("Error during logout:", error);
     }
   };
 
@@ -409,7 +435,7 @@ export default function Header({ onOpenLeftSidebar }) {
           </nav>
           <nav className="main">
             <ul>
-              {isLogin ? (
+              {!isLogin ? (
                 // User profile section
                 <>
                   <li className="user-login user-login-web">

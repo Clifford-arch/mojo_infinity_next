@@ -9,6 +9,7 @@ import Image from "next/image";
 import "@/../style/kyc.css";
 import "@/../style/landing.css";
 import { useAuth } from "../../../api/AuthContext";
+import { environment } from "../../../utils/environment";
 
 const Expertise = React.lazy(() =>
   import("../../../components/MojoInfinity/Expertise")
