@@ -11,6 +11,8 @@ import logout from "../api/logout";
 import axios from "axios";
 import { useAuth } from "../api/AuthContext";
 import useFetch from "../api/useFetch";
+import environment from "../utils/environment";
+
 export default function Header({ onOpenLeftSidebar }) {
   const { isLogin, setIsLogin } = useAuth();
   const [profile, setProfile] = useState(false);
@@ -91,7 +93,8 @@ export default function Header({ onOpenLeftSidebar }) {
         <div className="header-wrapper">
           <button className="openbtnleft" onClick={onOpenLeftSidebar}>
             <img
-              src="https://sandbox-st.mojoinfinity.com/images/mojoinfinity.svg"
+              // src="https://sandbox-st.mojoinfinity.com/images/mojoinfinity.svg"
+              src={`${environment.IMG_URL}mm-infinity-logo.svg`}
               alt="hamburger"
             />
           </button>
@@ -102,7 +105,8 @@ export default function Header({ onOpenLeftSidebar }) {
               className="mm-logo"
             >
               <img
-                src="https://sandbox-st.mojoinfinity.com/images/mojoinfinity.svg"
+                // src="https://sandbox-st.mojoinfinity.com/images/mojoinfinity.svg"
+                src={`${environment.IMG_URL}mm-infinity-logo.svg`}
                 alt="logo"
               />
             </Link>
@@ -435,7 +439,7 @@ export default function Header({ onOpenLeftSidebar }) {
           </nav>
           <nav className="main">
             <ul>
-              {isLogin ? (
+              {!isLogin ? (
                 // User profile section
                 <>
                   <li className="user-login user-login-web">
@@ -447,7 +451,8 @@ export default function Header({ onOpenLeftSidebar }) {
                       >
                         <img
                           alt="logo"
-                          src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                          // src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                          src={`${environment.IMG_URL}mm-no-img.svg`}
                         />
                       </button>
                       {profile && (
@@ -468,7 +473,8 @@ export default function Header({ onOpenLeftSidebar }) {
                       <button className="openbtnright" onClick={toggleProfile}>
                         <img
                           alt="logo"
-                          src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                          // src="https://sandboxwealth-st.mojoinfinity.com/images/mm-no-img.svg"
+                          src={`${environment.IMG_URL}mm-no-img.svg`}
                         />
                       </button>
                       {profile && (
