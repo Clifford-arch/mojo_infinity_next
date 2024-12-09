@@ -435,7 +435,7 @@ export default function Header({ onOpenLeftSidebar }) {
           </nav>
           <nav className="main">
             <ul>
-              {!isLogin ? (
+              {isLogin ? (
                 // User profile section
                 <>
                   <li className="user-login user-login-web">

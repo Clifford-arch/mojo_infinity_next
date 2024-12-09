@@ -9,7 +9,7 @@ import Image from "next/image";
 import "@/../style/kyc.css";
 import "@/../style/landing.css";
 import { useAuth } from "../../../api/AuthContext";
-import { environment } from "../../../utils/environment";
+import environment from "../../../utils/environment";
 
 const Expertise = React.lazy(() =>
   import("../../../components/MojoInfinity/Expertise")
@@ -52,14 +52,16 @@ const Page = () => {
         <div className="container text-center">
           <h1>Mojo Infinity</h1>
           <h5>Reimagined for Superior Results!</h5>
+          <Suspense>
           <Image
             className="img-fluid"
-            src="https://sandbox-st.mojoinfinity.com/images/infinity-mark.svg"
+            src={`${environment.IMG_URL}infinity-mark.svg`}
             alt="Mojo Infinity Mark"
             width={50}
             height={50}
             loading="lazy"
           />
+          </Suspense>
           <p>
             Your Launchpad to Achieving High Net Worth and Financial Prosperity
           </p>
