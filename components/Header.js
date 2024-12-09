@@ -35,7 +35,8 @@ export default function Header({ onOpenLeftSidebar }) {
   const { post, loading, error } = useFetch();
 
   const handleLogout = async () => {
-    const url = "https://sandboxwealth-frapi.mojoinfinity.com/users/logout";
+    // const url = "https://sandboxwealth-frapi.mojoinfinity.com/users/logout";
+    const url = `${environment.API_URL}/users/logout`;
     const payload = {
       code: 200,
       message: "success",
@@ -439,7 +440,7 @@ export default function Header({ onOpenLeftSidebar }) {
           </nav>
           <nav className="main">
             <ul>
-              {!isLogin ? (
+              {isLogin ? (
                 // User profile section
                 <>
                   <li className="user-login user-login-web">

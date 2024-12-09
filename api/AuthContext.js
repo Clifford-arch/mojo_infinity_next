@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-
+import environment from "../utils/environment";
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
@@ -15,7 +15,8 @@ export function AuthProvider({ children }) {
     setLoading(true);
     try {
       const response = await axios.get(
-        "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
+        // "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
+        `${environment.API_URL}/users/check-login`,
         {
           headers: {
             "Content-Type": "application/json",

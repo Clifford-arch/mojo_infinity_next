@@ -55,7 +55,7 @@ const Page = () => {
           <Suspense>
             <Image
               className="img-fluid"
-              src={`${environment.IMG_URL}mm-infinity-logo.svg`}
+              src={`${environment.IMG_URL}infinity-mark.svg`}
               alt="Mojo Infinity Mark"
               width={50}
               height={50}
@@ -120,33 +120,33 @@ const Page = () => {
             {[
               {
                 title: "Sign up and Complete your KYC",
-                imgSrc:
-                  "https://sandbox-st.mojoinfinity.com/images/get-started-1.svg",
-                // imgSrc:`${environment.IMG_URL}get-started-1.svg`,
+                // imgSrc:
+                //   "https://sandbox-st.mojoinfinity.com/images/get-started-1.svg",
+                imgSrc: `${environment.IMG_URL}get-started-1.svg`,
                 alt: "get-started-1",
               },
               {
                 title:
                   "Choose your preferred investment strategy and enter the amount you wish to invest with us.",
-                imgSrc:
-                  "https://sandbox-st.mojoinfinity.com/images/get-started-2.svg",
-                // imgSrc:`${environment.IMG_URL}get-started-2.svg`,
+                // imgSrc:
+                //   "https://sandbox-st.mojoinfinity.com/images/get-started-2.svg",
+                imgSrc: `${environment.IMG_URL}get-started-2.svg`,
                 alt: "get-started-2",
               },
               {
                 title:
                   "Generate your ideal portfolio and begin tracking your investment journey",
-                imgSrc:
-                  "https://sandbox-st.mojoinfinity.com/images/get-started-3.svg",
-                // imgSrc:`${environment.IMG_URL}get-started-3.svg`,
+                // imgSrc:
+                //   "https://sandbox-st.mojoinfinity.com/images/get-started-3.svg",
+                imgSrc: `${environment.IMG_URL}get-started-3.svg`,
                 alt: "get-started-3",
               },
               {
                 title:
                   "Set your portfolio parameters and pay the applicable fees",
-                imgSrc:
-                  "https://sandbox-st.mojoinfinity.com/images/get-started-4.svg",
-                // imgSrc:`${environment.IMG_URL}get-started-4.svg`,
+                // imgSrc:
+                //   "https://sandbox-st.mojoinfinity.com/images/get-started-4.svg",
+                imgSrc: `${environment.IMG_URL}get-started-4.svg`,
                 alt: "get-started-4",
               },
             ].map((step, index) => (
