@@ -53,7 +53,7 @@ const Page = () => {
           <h1>Mojo Infinity</h1>
           <h5>Reimagined for Superior Results!</h5>
           <Suspense>
-            <img
+            <Image
               className="img-fluid"
               src={`${environment.IMG_URL}mm-infinity-logo.svg`}
               alt="Mojo Infinity Mark"
