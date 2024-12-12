@@ -16,7 +16,7 @@ const Expertise = React.lazy(() =>
 );
 
 const Page = () => {
-  const { isLogin, redirect, nextStep, loading } = useAuth();
+  const { isLogin, redirect, nextStep, loadin } = useAuth();
   // useEffect(() => {
   //   const checkLogin = async () => {
   //     setLoading(true);

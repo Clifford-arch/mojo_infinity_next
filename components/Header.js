@@ -14,7 +14,7 @@ import useFetch from "../api/useFetch";
 // import environment from "../utils/environment";
 
 export default function Header({ onOpenLeftSidebar }) {
-  const { isLogin, setIsLogin } = useAuth();
+  const { isLogin, setIsLogin, checkLogin, loadin } = useAuth();
   const [profile, setProfile] = useState(false);
 
   const toggleProfile = () => {
@@ -53,8 +53,10 @@ export default function Header({ onOpenLeftSidebar }) {
     try {
       const response = await post(url, payload, config);
       console.log("Logout successful:", response);
+      checkLogin();
     } catch (error) {
       console.log("Error during logout:", error);
+      checkLogin();
     }
   };
 
@@ -440,7 +442,9 @@ export default function Header({ onOpenLeftSidebar }) {
           </nav>
           <nav className="main">
             <ul>
-              {isLogin ? (
+              {loadin ? (
+                <></>
+              ) : isLogin ? (
                 // User profile section
                 <>
                   <li className="user-login user-login-web">
