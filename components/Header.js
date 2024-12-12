@@ -21,70 +21,52 @@ export default function Header({ onOpenLeftSidebar }) {
     setProfile((prev) => !prev);
   };
 
+  // const { post, loading, error } = useFetch();
+
   // const handleLogout = async () => {
+  //   const url = "https://sandboxwealth-frapi.mojoinfinity.com/users/logout";
+  //   // const url = `${environment.API_URL}/users/logout`;
+  //   const payload = {
+  //     code: 200,
+  //     message: "success",
+  //     data: {},
+  //   };
+  //   const config = {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     withCredentials: true,
+  //   };
+
   //   try {
-  //     const response = await logout();
-  //     if (response.code == 200) {
-  //       setIsLogin(false);
-  //     }
+  //     const response = await post(url, payload, config);
+  //     console.log("Logout successful:", response);
+  //     checkLogin();
   //   } catch (error) {
-  //     throw error;
+  //     console.log("Error during logout:", error);
+  //     checkLogin();
   //   }
   // };
 
-  const { post, loading, error } = useFetch();
+  const logout = useFetch(
+    "https://sandboxwealth-frapi.mojoinfinity.com/users/logout",
+    "POST",
+    { code: 200, message: "success", data: {} }
+  );
 
   const handleLogout = async () => {
-    const url = "https://sandboxwealth-frapi.mojoinfinity.com/users/logout";
-    // const url = `${environment.API_URL}/users/logout`;
-    const payload = {
-      code: 200,
-      message: "success",
-      data: {},
-    };
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      withCredentials: true,
-    };
-
     try {
-      const response = await post(url, payload, config);
-      console.log("Logout successful:", response);
+      await logout.execute();
+      console.log('success: ',logout.responseData.code);
       checkLogin();
     } catch (error) {
       console.log("Error during logout:", error);
-      checkLogin();
+      // checkLogin();
+      const code=500;
+      console.log('success: ',code);
     }
   };
-
-  // useEffect(() => {
-  //   const checkLogin = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
-  //         {
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             "Accept": "application/json",
-  //           },
-  //           withCredentials: true,
-  //         }
-  //       );
-  //       console.log('Response Next: ', response.data.data, response.data.code);
-  //       if (response.data.code == 200) {
-  //         console.log('Is Login Next: ', response.data.data.is_login);
-  //         setIsLogin(response.data.data.is_login);
-  //       }
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //   checkLogin();
-  // }, []);
 
   return (
     <>
