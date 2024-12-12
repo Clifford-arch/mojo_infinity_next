@@ -1,3 +1,5 @@
+import environment from "../../utils/environment";
+
 export default function FeatureBox({
   number,
   title,
@@ -26,7 +28,8 @@ export default function FeatureBox({
           ) : (
             <a
               type="button"
-              href="https://sandbox.mojoinfinity.com/mojo/login?redirect=/landing"
+              // href="https://sandboxwealth-www.mojoinfinity.com/user/login"
+              href={`${environment.WWW_URL}/user/login`}
               className="btn btn-sm btn-primary"
             >
               Get Started
