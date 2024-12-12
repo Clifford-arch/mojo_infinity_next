@@ -1,12 +1,12 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-import environment from "../utils/environment";
+// import environment from "../utils/environment";
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [isLogin, setIsLogin] = useState(false);
-  const [redirectUrl, setRedirectUrl] = useState("");
+  const [redirect, setRedirect] = useState("");
   const [nextStep, setNextStep] = useState("");
   const [loading, setLoading] = useState(true);
 
@@ -15,8 +15,8 @@ export function AuthProvider({ children }) {
     setLoading(true);
     try {
       const response = await axios.get(
-        // "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
-        `${environment.API_URL}/users/check-login`,
+        "https://sandboxwealth-frapi.mojoinfinity.com/users/check-login",
+        // `${environment.API_URL}/users/check-login`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -27,7 +27,7 @@ export function AuthProvider({ children }) {
       );
       if (response.data.code === 200) {
         setIsLogin(response.data.data.is_login);
-        setRedirectUrl(response.data.data.redirect_url);
+        setRedirect(response.data.data.redirect_url);
         setNextStep(response.data.data.next_step);
         // Store login status in localStorage for persistence
         if (response.data.data.is_login) {
@@ -58,7 +58,7 @@ export function AuthProvider({ children }) {
     <AuthContext.Provider
       value={{
         isLogin,
-        redirectUrl,
+        redirect,
         nextStep,
         loading,
         checkLogin,

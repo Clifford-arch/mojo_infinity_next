@@ -1,4 +1,4 @@
-import environment from "../../utils/environment";
+// import environment from "../../utils/environment";
 
 export default function FeatureBox({
   number,
@@ -7,7 +7,21 @@ export default function FeatureBox({
   minInvestment,
   isLogin,
   redirectUrl,
+  authRedirectUrl,
 }) {
+  const getRedirectUrl = () => {
+    if (isLogin) {
+      if (
+        authRedirectUrl == "" ||
+        authRedirectUrl == "/invest-strategy/invest/"
+      ) {
+        return redirectUrl;
+      }
+      return authRedirectUrl;
+    }
+
+    return "https://sandboxwealth-www.mojoinfinity.com/user/login";
+  };
   return (
     <div className="col-12 col-md-4 col-lg-4">
       <div className="feature-box-1 h-100">
@@ -16,7 +30,7 @@ export default function FeatureBox({
           <h5>{title}</h5>
           <p>{description}</p>
         </div>
-        <div className="feature-footer">
+        {/* <div className="feature-footer">
           {isLogin ? (
             <a
               type="button"
@@ -28,13 +42,26 @@ export default function FeatureBox({
           ) : (
             <a
               type="button"
-              // href="https://sandboxwealth-www.mojoinfinity.com/user/login"
-              href={`${environment.WWW_URL}/user/login`}
+              href="https://sandboxwealth-www.mojoinfinity.com/user/login"
+              // href={`${environment.WWW_URL}/user/login`}
               className="btn btn-sm btn-primary"
             >
               Get Started
             </a>
           )}
+          <div>
+            <p>Minimum Investment</p>
+            <span>{minInvestment}</span>
+          </div>
+        </div> */}
+        <div className="feature-footer">
+          <a
+            type="button"
+            href={getRedirectUrl()}
+            className="btn btn-sm btn-primary"
+          >
+            Get Started
+          </a>
           <div>
             <p>Minimum Investment</p>
             <span>{minInvestment}</span>

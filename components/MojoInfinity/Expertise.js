@@ -1,5 +1,5 @@
 import React from "react";
-import environment from "../../utils/environment";
+// import environment from "../../utils/environment";
 
 const Expertise = ({ isLogin, nextStep }) => {
   return (
@@ -26,10 +26,10 @@ const Expertise = ({ isLogin, nextStep }) => {
                 <div className="card-body">
                   <div className="icon-sm">
                     <img
-                      // src={`https://sandbox-st.mojoinfinity.com/images/expertise-${
-                      //   i + 1
-                      // }.svg`}
-                      src={`${environment.IMG_URL}/expertise-${i + 1}.svg`}
+                      src={`https://sandbox-st.mojoinfinity.com/images/expertise-${
+                        i + 1
+                      }.svg`}
+                      // src={`${environment.IMG_URL}/expertise-${i + 1}.svg`}
                       alt={`expertise-${i + 1}`}
                     />
                   </div>

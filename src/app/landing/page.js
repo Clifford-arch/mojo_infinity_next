@@ -9,14 +9,14 @@ import Image from "next/image";
 import "@/../style/kyc.css";
 import "@/../style/landing.css";
 import { useAuth } from "../../../api/AuthContext";
-import environment from "../../../utils/environment";
+// import environment from "../../../utils/environment";
 
 const Expertise = React.lazy(() =>
   import("../../../components/MojoInfinity/Expertise")
 );
 
 const Page = () => {
-  const { isLogin, redirectUrl, nextStep, loading } = useAuth();
+  const { isLogin, redirect, nextStep, loading } = useAuth();
   // useEffect(() => {
   //   const checkLogin = async () => {
   //     setLoading(true);
@@ -55,7 +55,7 @@ const Page = () => {
           <Suspense>
             <Image
               className="img-fluid"
-              src={`${environment.IMG_URL}infinity-mark.svg`}
+              src={`https://sandbox-st.mojoinfinity.com/images/infinity-mark.svg`}
               alt="Mojo Infinity Mark"
               width={50}
               height={50}
@@ -106,6 +106,7 @@ const Page = () => {
                 {...feature}
                 isLogin={isLogin}
                 nextStep={nextStep}
+                authRedirectUrl={redirect}
                 redirectUrl={feature.url}
               />
             ))}
@@ -120,33 +121,33 @@ const Page = () => {
             {[
               {
                 title: "Sign up and Complete your KYC",
-                // imgSrc:
-                //   "https://sandbox-st.mojoinfinity.com/images/get-started-1.svg",
-                imgSrc: `${environment.IMG_URL}get-started-1.svg`,
+                imgSrc:
+                  "https://sandbox-st.mojoinfinity.com/images/get-started-1.svg",
+                // imgSrc: `${environment.IMG_URL}get-started-1.svg`,
                 alt: "get-started-1",
               },
               {
                 title:
                   "Choose your preferred investment strategy and enter the amount you wish to invest with us.",
-                // imgSrc:
-                //   "https://sandbox-st.mojoinfinity.com/images/get-started-2.svg",
-                imgSrc: `${environment.IMG_URL}get-started-2.svg`,
+                imgSrc:
+                  "https://sandbox-st.mojoinfinity.com/images/get-started-2.svg",
+                // imgSrc: `${environment.IMG_URL}get-started-2.svg`,
                 alt: "get-started-2",
               },
               {
                 title:
                   "Generate your ideal portfolio and begin tracking your investment journey",
-                // imgSrc:
-                //   "https://sandbox-st.mojoinfinity.com/images/get-started-3.svg",
-                imgSrc: `${environment.IMG_URL}get-started-3.svg`,
+                imgSrc:
+                  "https://sandbox-st.mojoinfinity.com/images/get-started-3.svg",
+                // imgSrc: `${environment.IMG_URL}get-started-3.svg`,
                 alt: "get-started-3",
               },
               {
                 title:
                   "Set your portfolio parameters and pay the applicable fees",
-                // imgSrc:
-                //   "https://sandbox-st.mojoinfinity.com/images/get-started-4.svg",
-                imgSrc: `${environment.IMG_URL}get-started-4.svg`,
+                imgSrc:
+                  "https://sandbox-st.mojoinfinity.com/images/get-started-4.svg",
+                // imgSrc: `${environment.IMG_URL}get-started-4.svg`,
                 alt: "get-started-4",
               },
             ].map((step, index) => (
