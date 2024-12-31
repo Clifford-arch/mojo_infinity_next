@@ -17,18 +17,18 @@ const nextConfig = {
     ],
   },
 
-  experimental: {
-    modern: true,
-    esmExternals: true,
-  },
+  // experimental: {
+  //   modern: true,
+  //   esmExternals: true,
+  // },
   compress: true,
-  optimizeFonts: true,
-  swcMinify: true,
+  // optimizeFonts: true,
+  // swcMinify: true,
   async redirects() {
     return [
       {
         source: "/",
-        destination: "/landing",
+        destination: "/landing2",
         permanent: true,
       },
     ];

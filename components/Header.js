@@ -58,13 +58,13 @@ export default function Header({ onOpenLeftSidebar }) {
   const handleLogout = async () => {
     try {
       await logout.execute();
-      console.log('success: ',logout.responseData.code);
+      console.log("success: ", logout.responseData.code);
       checkLogin();
     } catch (error) {
       console.log("Error during logout:", error);
       // checkLogin();
-      const code=500;
-      console.log('success: ',code);
+      const code = 500;
+      console.log("success: ", code);
     }
   };
 
