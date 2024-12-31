@@ -47,20 +47,21 @@ export default function RootLayout({ children }) {
         <link
           rel="icon"
           type="image/png"
-          href="https://st.mojoinfinity.com/images/favicon-32x32.png"
+          href="/favicon-32x32.png"
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href="https://st.mojoinfinity.com/images/favicon-16x16.png"
+          href="/favicon-16x16.png"
           sizes="16x16"
         />
-        <link
+        {/* <link
           rel="icon"
           type="image/x-icon"
           href="https://st.mojoinfinity.com/images/favicon.ico"
-        />
+        /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <html lang="en">
