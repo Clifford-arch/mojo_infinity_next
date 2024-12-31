@@ -122,3 +122,13 @@
 .hero-row{display:flex;flex-direction:column;text-align:center;}
 
 }
+.explore-text{font-size:24px;font-weight:600;line-height:31px;color:#1C1C1C;
+  /* padding-top:130px; */
+}
+.conservative-portfolio{font-size:18px;font-weight:700;line-height:25px;color:#1C1C1C;}
+.risk-text{font-size:14px;font-weight:400;line-height:19px;color:#64668E;padding-top:10px;}
+.para-font{font-size:13px;font-weight:400;line-height:18px;color:#1C1C1C;padding-top:10px;height:100px;}
+.cards-flex-style{display:flex;align-items:center;justify-content:space-between;padding-top:26px;}
+.inner-card-style{padding:20px 20px 20px 20px;background-color:#FFFFFF;border:1px solid #D9D9D9;border-radius:5px;}
+.trending-div{background-color:#F8F4FF;border-radius:5px;border:1px solid #582FDA;font-size:10px;font-weight:600;line-height:14px;text-align:center;color:#1C1C1C;display:inline-block;padding:5px 15px;}
+.trending{display:flex;align-items:center;justify-content:space-between;}
