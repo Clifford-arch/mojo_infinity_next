@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const SectionSpace = () => {
-  const [selectedPortfolio, setSelectedPortfolio] = useState("all");
+  const [selectedPortfolio, setSelectedPortfolio] = useState("multi-bagger");
 
   const portfolioData = {
     all: {
