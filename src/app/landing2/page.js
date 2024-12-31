@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import "@/../style/landing2.css";
+// import "@/../style/landing2.css";
 import RegBanner from "../../../components/NewMojo/RegBanner";
 import Steps from "../../../components/NewMojo/Steps";
 import InfinityBenefits from "../../../components/NewMojo/InfinityBenefits";
@@ -31,6 +31,7 @@ const Landing2 = () => {
                   src="https://sandbox-st.mojowealth.in/images/home/infinity-icon.png"
                   width="70px"
                   className="img-fluid my-3"
+                  alt="infinity-icon.png"
                 />
                 <p className="col-md-8 mx-auto">
                   Your Launchpad to Achieving High Net Worth and Financial
@@ -42,6 +43,7 @@ const Landing2 = () => {
                       <img
                         src="https://sandbox-st.mojowealth.in/images/home/personalised-icon.png"
                         className="img-fluid"
+                        alt="personalised-icon"
                       />
                       Personalised Portfolio
                     </div>
@@ -51,6 +53,7 @@ const Landing2 = () => {
                       <img
                         src="https://sandbox-st.mojowealth.in/images/home/active-advisory-icon.png"
                         className="img-fluid"
+                        alt="active-advisory-icon.png"
                       />
                       Active Advisory
                     </div>
@@ -60,6 +63,7 @@ const Landing2 = () => {
                       <img
                         src="https://sandbox-st.mojowealth.in/images/home/performance-tracking-icon.png"
                         className="img-fluid"
+                        alt="performance-tracking-icon.png"
                       />
                       Performance Tracking
                     </div>

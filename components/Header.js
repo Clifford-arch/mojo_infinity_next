@@ -128,7 +128,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Stocks Research{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -143,7 +143,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Result Corner{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -158,7 +158,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           IPO Analysis{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -172,7 +172,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Global Stock Research{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -186,7 +186,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           LIVE Events{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -201,7 +201,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Watchlist{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -258,7 +258,7 @@ export default function Header({ onOpenLeftSidebar }) {
                         <div className="nav-heading">
                           Stock Recommendations{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -273,7 +273,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Top Stocks to Invest{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -288,7 +288,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Stock of the Month{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -305,7 +305,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Mutual Fund Research{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -319,7 +319,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Trading Calls{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -333,7 +333,7 @@ export default function Header({ onOpenLeftSidebar }) {
                         <div className="nav-heading">
                           Research Report on all stocks{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -348,7 +348,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Make your own Screener{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -365,7 +365,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Replace your stocks with top stocks{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -379,7 +379,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Model Portfolio{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />
@@ -393,7 +393,7 @@ export default function Header({ onOpenLeftSidebar }) {
                           {" "}
                           Portfolio Optimiser{" "}
                           <img
-                            alt=""
+                            alt="right"
                             className="right--arrow"
                             src="https://sandbox-st.mojoinfinity.com/images/right-arrow.svg"
                           />

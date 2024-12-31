@@ -24,7 +24,10 @@ const SectionSpace = () => {
                   <div className="col-12 col-md-7 me-md-4 wealth-basket">
                     <div className="d-flex align-items-center gap-3 mb-2">
                       <span className="mp-sectorIcons flex-shrink-0">
-                        <img src="https://sandbox-st.mojomf.com/images/mf/logos/icici_mm.png" />
+                        <img
+                          src="https://sandbox-st.mojomf.com/images/mf/logos/icici_mm.png"
+                          alt="icici_mm.png"
+                        />
                       </span>
                       <div className="flex-grow-1 title">
                         Multi-Bagger Equity Portfolio{" "}
@@ -50,7 +53,10 @@ const SectionSpace = () => {
                         <div className="col-3 col-md-3">
                           <div className="head">3 Year CAGR</div>
                           <div className="value">
-                            <img src="https://sandbox-st.mojowealth.in/images/home/carg.png" />
+                            <img
+                              src="https://sandbox-st.mojowealth.in/images/home/carg.png"
+                              alt="carg.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -63,6 +69,7 @@ const SectionSpace = () => {
                     <img
                       src="https://sandbox-st.mojowealth.in/images/home/graph1a.png"
                       className="img-fluid"
+                      alt="graph1a.png"
                     />
                   </div>
                 </div>
@@ -94,6 +101,7 @@ const SectionSpace = () => {
                   <img
                     src="https://sandbox-st.mojowealth.in/images/home/own-fund-manager.png"
                     className="img-fluid"
+                    alt="own-fund-manager.png"
                   />
                 </div>
               </div>
@@ -124,6 +132,7 @@ const SectionSpace = () => {
                     src="https://sandbox-st.mojowealth.in/images/home/perfect-match.png"
                     height="260px"
                     className="img-fluid"
+                    alt="perfect-match.png"
                   />
                 </div>
               </div>

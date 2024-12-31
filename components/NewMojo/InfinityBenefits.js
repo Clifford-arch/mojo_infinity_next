@@ -20,6 +20,7 @@ const InfinityBenefits = () => {
               <img
                 src="https://sandbox-st.mojowealth.in/images/home/regular-updt.png"
                 className="img-fluid"
+                alt="regular-updt.png"
               />{" "}
               Regular Updates and Insights
             </div>
@@ -29,6 +30,7 @@ const InfinityBenefits = () => {
               <img
                 src="https://sandbox-st.mojowealth.in/images/home/exclusive-webinar.png"
                 className="img-fluid"
+                alt="exclusive-webinar.png"
               />{" "}
               Exclusive Webinars
             </div>
@@ -38,6 +40,7 @@ const InfinityBenefits = () => {
               <img
                 src="https://sandbox-st.mojowealth.in/images/home/portfolio-review.png"
                 className="img-fluid"
+                alt="portfolio-review.png"
               />{" "}
               Portfolio Reviews
             </div>

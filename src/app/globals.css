@@ -1,5 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "../../style/theme.css";
+@import '../../style//landing2.css';
 
 .dmsans{
     font-family: var(--font-dmsans);
