@@ -437,7 +437,7 @@ const SectionSpace = () => {
         <div className="container homesection p-0">
           <div className="row ">
             <div className="section-header text-center">
-              <div className="section_title">
+              <div className="section_title1">
                 Tailored Solutions for Every Investor
               </div>
               <div className="section_subtitle">AI Driven Strategies</div>

@@ -24,7 +24,7 @@ const RegBanner = ({ isLogin }) => {
             />
           </div>
           <div className="col-12 col-md-8 text-center text-md-start order-lg-1">
-            <div className="section_title">
+            <div className="section_title1">
               Register and Assess Your Risk Profile in 5 Minutes!
             </div>
             <div className="mt-3">
