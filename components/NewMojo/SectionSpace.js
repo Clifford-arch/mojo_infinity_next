@@ -7,6 +7,15 @@ const SectionSpace = () => {
     all: {
       title: "All Portfolios",
       content: (
+        <p>
+          All Portfolio Content. This will have data related to All Portfolio
+          type.
+        </p>
+      ),
+    },
+    "multi-bagger": {
+      title: "Multi-Bagger",
+      content: (
         <>
           <div className="col-12 mt-3">
             <div className="mp-card">
@@ -121,15 +130,6 @@ const SectionSpace = () => {
             </div>
           </section>
         </>
-      ),
-    },
-    "multi-bagger": {
-      title: "Multi-Bagger",
-      content: (
-        <p>
-          Multi-Bagger Portfolio Content. This will have data related to
-          Multi-Bagger portfolio type.
-        </p>
       ),
     },
     aggressive: {
