@@ -74,7 +74,7 @@ const Landing2 = () => {
           </div>
         </section>
         <RegBanner isLogin={isLogin} />
-        <SectionSpace />
+        <SectionSpace isLogin={isLogin} />
         <Steps isLogin={isLogin} />
         <InfinityBenefits />
       </main>

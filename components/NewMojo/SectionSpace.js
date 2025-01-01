@@ -1,7 +1,17 @@
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const SectionSpace = () => {
+const SectionSpace = ({ isLogin }) => {
   const [selectedPortfolio, setSelectedPortfolio] = useState("multi-bagger");
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    if (isLogin) {
+      router.push("/invest-strategy/invest");
+    } else {
+      router.push("/user/login");
+    }
+  };
 
   const portfolioData = {
     all: {
@@ -33,7 +43,11 @@ const SectionSpace = () => {
                     </div>
                   </div>
                   <div className="text-center pt-3">
-                    <button type="button" className="btn  btn-primary w-100">
+                    <button
+                      type="button"
+                      className="btn  btn-primary w-100"
+                      onClick={handleButtonClick}
+                    >
                       Know More
                     </button>
                   </div>
@@ -65,7 +79,11 @@ const SectionSpace = () => {
                   </div>
                 </div>
                 <div className="text-center pt-3">
-                  <button type="button" className="btn  btn-primary w-100">
+                  <button
+                    type="button"
+                    className="btn  btn-primary w-100"
+                    onClick={handleButtonClick}
+                  >
                     Know More
                   </button>
                 </div>
@@ -91,7 +109,11 @@ const SectionSpace = () => {
                   </div>
                 </div>
                 <div className="text-center pt-3">
-                  <button type="button" className="btn  btn-primary w-100">
+                  <button
+                    type="button"
+                    className="btn  btn-primary w-100"
+                    onClick={handleButtonClick}
+                  >
                     Know More
                   </button>
                 </div>
@@ -149,7 +171,11 @@ const SectionSpace = () => {
                         </div>
                       </div>
                     </div>
-                    <button type="button" className="btn btn-primary">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={handleButtonClick}
+                    >
                       Know More
                     </button>
                   </div>
@@ -164,68 +190,6 @@ const SectionSpace = () => {
               </div>
             </div>
           </div>
-          <section className="sub-sectionspace">
-            <div className="container bg-primary innerspace">
-              <div className="row  ">
-                <div className="col-12 col-md-6">
-                  <div className="section-header mt-0">
-                    <div className="section_title">
-                      Be Your Own Fund Manager!
-                    </div>
-                  </div>
-                  <p>
-                    Set your stock selection rules - we will find stocks that
-                    fit perfectly. Build your ideal portfolio by answering just
-                    a few questions and start investing effortlessly with just
-                    one click!
-                  </p>
-                  <div className="mt-3">
-                    <button type="button" className="btn btn-primary">
-                      I am Ready
-                    </button>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6">
-                  <img
-                    src="https://sandbox-st.mojowealth.in/images/home/own-fund-manager.png"
-                    className="img-fluid"
-                    alt="own-fund-manager.png"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="sub-sectionspace">
-            <div className="container bg-secondary innerspace">
-              <div className="row  ">
-                <div className="col-12 col-md-6">
-                  <div className="section-header mt-0">
-                    <div className="section_title">
-                      Using MarketsMojo? This Could Be Your Perfect Match!
-                    </div>
-                  </div>
-                  <p>
-                    Choose from our powerful strategies - Mojo Stocks, Reliable
-                    Performers, Hidden Turnarounds, and Momentum Now - customize
-                    their weightage, and get the perfect mix to generate alpha.
-                  </p>
-                  <div className="mt-3">
-                    <button type="button" className="btn btn-primary">
-                      I am Ready
-                    </button>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6">
-                  <img
-                    src="https://sandbox-st.mojowealth.in/images/home/perfect-match.png"
-                    height="260px"
-                    className="img-fluid"
-                    alt="perfect-match.png"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
         </>
       ),
     },
@@ -274,7 +238,11 @@ const SectionSpace = () => {
                       </div>
                     </div>
                   </div>
-                  <button type="button" className="btn btn-primary">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={handleButtonClick}
+                  >
                     Know More
                   </button>
                 </div>
@@ -336,7 +304,11 @@ const SectionSpace = () => {
                       </div>
                     </div>
                   </div>
-                  <button type="button" className="btn btn-primary">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={handleButtonClick}
+                  >
                     Know More
                   </button>
                 </div>
@@ -399,7 +371,11 @@ const SectionSpace = () => {
                       </div>
                     </div>
                   </div>
-                  <button type="button" className="btn btn-primary">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={handleButtonClick}
+                  >
                     Know More
                   </button>
                 </div>
@@ -501,6 +477,78 @@ const SectionSpace = () => {
             <div className="col-12">
               {/* <h3>{portfolioData[selectedPortfolio].title}</h3> */}
               {portfolioData[selectedPortfolio].content}
+
+              <section className="sub-sectionspace">
+                <div className="container bg-primary innerspace">
+                  <div className="row  ">
+                    <div className="col-12 col-md-6">
+                      <div className="section-header mt-0">
+                        <div className="section_title">
+                          Be Your Own Fund Manager!
+                        </div>
+                      </div>
+                      <p>
+                        Set your stock selection rules - we will find stocks
+                        that fit perfectly. Build your ideal portfolio by
+                        answering just a few questions and start investing
+                        effortlessly with just one click!
+                      </p>
+                      <div className="mt-3">
+                        <button
+                          type="button"
+                          className="btn btn-primary"
+                          onClick={handleButtonClick}
+                        >
+                          I am Ready
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-12 col-md-6">
+                      <img
+                        src="https://sandbox-st.mojowealth.in/images/home/own-fund-manager.png"
+                        className="img-fluid"
+                        alt="own-fund-manager.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section className="sub-sectionspace">
+                <div className="container bg-secondary innerspace">
+                  <div className="row  ">
+                    <div className="col-12 col-md-6">
+                      <div className="section-header mt-0">
+                        <div className="section_title">
+                          Using MarketsMojo? This Could Be Your Perfect Match!
+                        </div>
+                      </div>
+                      <p>
+                        Choose from our powerful strategies - Mojo Stocks,
+                        Reliable Performers, Hidden Turnarounds, and Momentum
+                        Now - customize their weightage, and get the perfect mix
+                        to generate alpha.
+                      </p>
+                      <div className="mt-3">
+                        <button
+                          type="button"
+                          className="btn btn-primary"
+                          onClick={handleButtonClick}
+                        >
+                          I am Ready
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-12 col-md-6">
+                      <img
+                        src="https://sandbox-st.mojowealth.in/images/home/perfect-match.png"
+                        height="260px"
+                        className="img-fluid"
+                        alt="perfect-match.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
