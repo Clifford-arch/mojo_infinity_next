@@ -33,10 +33,7 @@ const SectionSpace = () => {
                     </div>
                   </div>
                   <div className="text-center pt-3">
-                    <button
-                      type="button"
-                      className="btn btn-lg btn-primary w-100"
-                    >
+                    <button type="button" className="btn  btn-primary w-100">
                       Know More
                     </button>
                   </div>
@@ -68,10 +65,7 @@ const SectionSpace = () => {
                   </div>
                 </div>
                 <div className="text-center pt-3">
-                  <button
-                    type="button"
-                    className="btn btn-lg btn-primary w-100"
-                  >
+                  <button type="button" className="btn  btn-primary w-100">
                     Know More
                   </button>
                 </div>
@@ -97,10 +91,7 @@ const SectionSpace = () => {
                   </div>
                 </div>
                 <div className="text-center pt-3">
-                  <button
-                    type="button"
-                    className="btn btn-lg btn-primary w-100"
-                  >
+                  <button type="button" className="btn  btn-primary w-100">
                     Know More
                   </button>
                 </div>
