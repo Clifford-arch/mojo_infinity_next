@@ -76,9 +76,11 @@ export default function Header({ onOpenLeftSidebar }) {
         suppressHydrationWarning={true}
       >
         <div className="header-wrapper">
-          <button className="openbtnleft" onClick={onOpenLeftSidebar}>
+          <button
+            className="openbtnleft mobile-sitelogo"
+            onClick={onOpenLeftSidebar}
+          >
             <img
-              // src="https://sandbox-st.mojoinfinity.com/images/mojoinfinity.svg"
               src={`https://sandbox-st.mojoinfinity.com/images/mm-infinity-logo.svg`}
               alt="hamburger"
             />

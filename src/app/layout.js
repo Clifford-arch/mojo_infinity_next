@@ -62,6 +62,10 @@ export default function RootLayout({ children }) {
           href="https://st.mojoinfinity.com/images/favicon.ico"
         /> */}
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
       </Head>
 
       <html lang="en">
@@ -72,6 +76,7 @@ export default function RootLayout({ children }) {
               {children}
               <Footer />
             </main>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
           </AuthProvider>
         </body>
       </html>

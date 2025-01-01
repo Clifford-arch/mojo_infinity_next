@@ -1,9 +1,12 @@
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import "../../style/slider.css";
 
 const SectionSpace = ({ isLogin }) => {
   const [selectedPortfolio, setSelectedPortfolio] = useState("multi-bagger");
   const router = useRouter();
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const sliderWrapperRef = useRef(null);
 
   const handleButtonClick = () => {
     if (isLogin) {
@@ -12,15 +15,72 @@ const SectionSpace = ({ isLogin }) => {
       router.push("/user/login");
     }
   };
+  // const [slidesToShow, setSlidesToShow] = useState(3);
+  // const handleResize = () => {
+  //   if (window.innerWidth <= 768) {
+  //     setSlidesToShow(1); // Show 1 slide on smaller screens
+  //   } else {
+  //     setSlidesToShow(3); // Show 3 slides on larger screens
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   handleResize(); // Initial resize check
+  //   window.addEventListener("resize", handleResize); // Listen for screen resize
+  //   return () => window.removeEventListener("resize", handleResize); // Cleanup listener
+  // }, []);
+  // const slides = [
+  //   {
+  //     title: "Conservative Portfolio",
+  //     risk: "Low Risk",
+  //     description:
+  //       "The aim is steady growth with minimal risk, making it ideal for individuals who prioritize capital preservation and are risk-averse.",
+  //     cagr: "12%",
+  //     investment: "2,00,000",
+  //   },
+  //   {
+  //     title: "Aggressive Portfolio",
+  //     risk: "High Risk",
+  //     description:
+  //       "The aim is high growth through investments in mid-cap and small-cap stocks, making it ideal for investors with a high-risk tolerance.",
+  //     cagr: "15%",
+  //     investment: "5,00,000",
+  //   },
+  //   {
+  //     title: "Moderate Portfolio",
+  //     risk: "Medium Risk",
+  //     description:
+  //       "The aim is a balance between growth and stability, making it suitable for individuals with a medium risk tolerance.",
+  //     cagr: "10%",
+  //     investment: "3,00,000",
+  //   },
+  //   {
+  //     title: "Moderate Portfolio",
+  //     risk: "Medium Risk",
+  //     description:
+  //       "The aim is a balance between growth and stability, making it suitable for individuals with a medium risk tolerance.",
+  //     cagr: "10%",
+  //     investment: "3,00,000",
+  //   },
+  // ];
+
+  // const handlePrev = () => {
+  //   setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
+  // };
+
+  // const handleNext = () => {
+  //   const maxIndex = slides.length - slidesToShow;
+  //   setCurrentIndex((prevIndex) => Math.min(maxIndex, prevIndex + 1));
+  // };
 
   const portfolioData = {
     all: {
       title: "All Portfolios",
       content: (
         <>
-          <div className="explore-text">Explore Other Portfolios</div>
-          <div className="row justify-content-center pt-3">
-            <div className="col-md-4 col-12 pb-3">
+          {/* <div className="explore-text">Explore Other Portfolios</div> */}
+          <div className="row justify-content-center pt-3 explore-portfolios">
+            <div className="col-md-3 col-12 pb-3">
               <div className="inner-card-style d-flex flex-column h-100 w-100">
                 <div className="conservative-portfolio">
                   Conservative Portfolio
@@ -33,11 +93,11 @@ const SectionSpace = ({ isLogin }) => {
                 </div>
                 <div className="fixed-footer">
                   <div className="cards-flex-style">
-                    <div className="flex-div-1">
+                    <div className="flex-div-1 text-center">
                       <div className="investment-stock">3Y CAGR</div>
                       <div className="investment-value">12%</div>
                     </div>
-                    <div className="flex-div-2">
+                    <div className="flex-div-2 text-center">
                       <div className="investment-stock">Min. Investment</div>
                       <div className="investment-value">2,00,000</div>
                     </div>
@@ -54,7 +114,7 @@ const SectionSpace = ({ isLogin }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 col-12 pb-3">
+            <div className="col-md-3 col-12 pb-3">
               <div className="inner-card-style d-flex flex-column h-100 w-100">
                 <div className="trending">
                   <div className="conservative-portfolio">
@@ -69,11 +129,11 @@ const SectionSpace = ({ isLogin }) => {
                   high-risk tolerance and a long investment horizon.
                 </div>
                 <div className="cards-flex-style">
-                  <div className="flex-div-1">
+                  <div className="flex-div-1 text-center">
                     <div className="investment-stock">3Y CAGR</div>
                     <div className="investment-value">12%</div>
                   </div>
-                  <div className="flex-div-2">
+                  <div className="flex-div-2 text-center">
                     <div className="investment-stock">Min. Investment</div>
                     <div className="investment-value">2,00,000</div>
                   </div>
@@ -89,7 +149,7 @@ const SectionSpace = ({ isLogin }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 col-12 pb-3">
+            <div className="col-md-3 col-12 pb-3">
               <div className="inner-card-style d-flex flex-column h-100 w-100">
                 <div className="conservative-portfolio">Moderate Portfolio</div>
                 <div className="risk-text">Medium Risk</div>
@@ -99,11 +159,43 @@ const SectionSpace = ({ isLogin }) => {
                   focus on long-term returns
                 </div>
                 <div className="cards-flex-style">
-                  <div className="flex-div-1">
+                  <div className="flex-div-1 text-center">
                     <div className="investment-stock">3Y CAGR</div>
                     <div className="investment-value">12%</div>
                   </div>
-                  <div className="flex-div-2">
+                  <div className="flex-div-2 text-center">
+                    <div className="investment-stock">Min. Investment</div>
+                    <div className="investment-value">2,00,000</div>
+                  </div>
+                </div>
+                <div className="text-center pt-3">
+                  <button
+                    type="button"
+                    className="btn  btn-primary w-100"
+                    onClick={handleButtonClick}
+                  >
+                    Know More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3 col-12 pb-3">
+              <div className="inner-card-style d-flex flex-column h-100 w-100">
+                <div className="conservative-portfolio">
+                  Multi-Bagger Equity Portfolio
+                </div>
+                <div className="risk-text">Very High Risk</div>
+                <div className="para-font">
+                  The aim is maximum capital appreciation through high-risk
+                  investments, making it suitable for very high-risk investors
+                  and a long-term perspective
+                </div>
+                <div className="cards-flex-style">
+                  <div className="flex-div-1 text-center">
+                    <div className="investment-stock">3Y CAGR</div>
+                    <div className="investment-value">12%</div>
+                  </div>
+                  <div className="flex-div-2 text-center">
                     <div className="investment-stock">Min. Investment</div>
                     <div className="investment-value">2,00,000</div>
                   </div>
@@ -120,6 +212,60 @@ const SectionSpace = ({ isLogin }) => {
               </div>
             </div>
           </div>
+          {/* <div className="slider-container">
+            <div
+              className="slider-wrapper"
+              ref={sliderWrapperRef}
+              style={{
+                display: "flex",
+                transform: `translateX(${
+                  -currentIndex * (100 / slidesToShow)
+                }%)`,
+                transition: "transform 0.3s ease-in-out",
+              }}
+            >
+              {slides.map((slide, index) => (
+                <div
+                  className="slide"
+                  key={index}
+                  style={{ flex: `0 0 ${100 / slidesToShow}%` }}
+                >
+                  <div className="inner-card-style">
+                    <div className="conservative-portfolio">{slide.title}</div>
+                    <div className="risk-text">{slide.risk}</div>
+                    <div className="para-font">{slide.description}</div>
+                    <div className="cards-flex-style">
+                      <div className="flex-div-1">
+                        <div className="investment-stock">3Y CAGR</div>
+                        <div className="investment-value">{slide.cagr}</div>
+                      </div>
+                      <div className="flex-div-2">
+                        <div className="investment-stock">Min. Investment</div>
+                        <div className="investment-value">
+                          {slide.investment}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-center pt-3">
+                      <button
+                        type="button"
+                        className="btn btn-primary w-100"
+                        onClick={handleButtonClick}
+                      >
+                        Know More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button className="slider-btn prev-btn" onClick={handlePrev}>
+              &lt;
+            </button>
+            <button className="slider-btn next-btn" onClick={handleNext}>
+              &gt;
+            </button>
+          </div> */}
         </>
       ),
     },
