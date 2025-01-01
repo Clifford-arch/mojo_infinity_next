@@ -7,7 +7,7 @@ import Steps from "../../../components/NewMojo/Steps";
 import InfinityBenefits from "../../../components/NewMojo/InfinityBenefits";
 import { useAuth } from "../../../api/AuthContext";
 import SectionSpace from "../../../components/NewMojo/SectionSpace";
-
+q
 const Landing2 = () => {
   const { isLogin } = useAuth();
   const router = useRouter();
