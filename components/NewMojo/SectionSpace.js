@@ -83,37 +83,36 @@ const SectionSpace = ({ isLogin }) => {
             <div className="col-md-3 col-12 pb-3">
               <div className="inner-card-style d-flex flex-column h-100 w-100">
                 <div className="conservative-portfolio">
-                  Conservative Portfolio
+                  Multi-Bagger Equity Portfolio
                 </div>
-                <div className="risk-text">Low Risk</div>
+                <div className="risk-text">Very High Risk</div>
                 <div className="para-font">
-                  The aim is steady growth with minimal risk, making it ideal
-                  for individuals who prioritize capital preservation and are
-                  risk-averse.
+                  The aim is maximum capital appreciation through high-risk
+                  investments, making it suitable for very high-risk investors
+                  and a long-term perspective
                 </div>
-                <div className="fixed-footer">
-                  <div className="cards-flex-style">
-                    <div className="flex-div-1 text-center">
-                      <div className="investment-stock">3Y CAGR</div>
-                      <div className="investment-value">12%</div>
-                    </div>
-                    <div className="flex-div-2 text-center">
-                      <div className="investment-stock">Min. Investment</div>
-                      <div className="investment-value">2,00,000</div>
-                    </div>
+                <div className="cards-flex-style">
+                  <div className="flex-div-1 text-center">
+                    <div className="investment-stock">3Y CAGR</div>
+                    <div className="investment-value">12%</div>
                   </div>
-                  <div className="text-center pt-3">
-                    <button
-                      type="button"
-                      className="btn  btn-primary w-100"
-                      onClick={handleButtonClick}
-                    >
-                      Know More
-                    </button>
+                  <div className="flex-div-2 text-center">
+                    <div className="investment-stock">Min. Investment</div>
+                    <div className="investment-value">2,00,000</div>
                   </div>
+                </div>
+                <div className="text-center pt-3">
+                  <button
+                    type="button"
+                    className="btn  btn-primary w-100"
+                    onClick={handleButtonClick}
+                  >
+                    Know More
+                  </button>
                 </div>
               </div>
             </div>
+
             <div className="col-md-3 col-12 pb-3">
               <div className="inner-card-style d-flex flex-column h-100 w-100">
                 <div className="trending">
@@ -182,32 +181,34 @@ const SectionSpace = ({ isLogin }) => {
             <div className="col-md-3 col-12 pb-3">
               <div className="inner-card-style d-flex flex-column h-100 w-100">
                 <div className="conservative-portfolio">
-                  Multi-Bagger Equity Portfolio
+                  Conservative Portfolio
                 </div>
-                <div className="risk-text">Very High Risk</div>
+                <div className="risk-text">Low Risk</div>
                 <div className="para-font">
-                  The aim is maximum capital appreciation through high-risk
-                  investments, making it suitable for very high-risk investors
-                  and a long-term perspective
+                  The aim is steady growth with minimal risk, making it ideal
+                  for individuals who prioritize capital preservation and are
+                  risk-averse.
                 </div>
-                <div className="cards-flex-style">
-                  <div className="flex-div-1 text-center">
-                    <div className="investment-stock">3Y CAGR</div>
-                    <div className="investment-value">12%</div>
+                <div className="fixed-footer">
+                  <div className="cards-flex-style">
+                    <div className="flex-div-1 text-center">
+                      <div className="investment-stock">3Y CAGR</div>
+                      <div className="investment-value">12%</div>
+                    </div>
+                    <div className="flex-div-2 text-center">
+                      <div className="investment-stock">Min. Investment</div>
+                      <div className="investment-value">2,00,000</div>
+                    </div>
                   </div>
-                  <div className="flex-div-2 text-center">
-                    <div className="investment-stock">Min. Investment</div>
-                    <div className="investment-value">2,00,000</div>
+                  <div className="text-center pt-3">
+                    <button
+                      type="button"
+                      className="btn  btn-primary w-100"
+                      onClick={handleButtonClick}
+                    >
+                      Know More
+                    </button>
                   </div>
-                </div>
-                <div className="text-center pt-3">
-                  <button
-                    type="button"
-                    className="btn  btn-primary w-100"
-                    onClick={handleButtonClick}
-                  >
-                    Know More
-                  </button>
                 </div>
               </div>
             </div>
@@ -308,10 +309,12 @@ const SectionSpace = ({ isLogin }) => {
                         </div>
                         <div className="col-3 col-md-3">
                           <div className="head">3 Year CAGR</div>
-                          <div className="value">
+                          <div className="value ">
                             <img
                               src="https://sandbox-st.mojowealth.in/images/home/carg.png"
                               alt="carg.png"
+                              width="50"
+                              height="17"
                             />
                           </div>
                         </div>
@@ -556,7 +559,7 @@ const SectionSpace = ({ isLogin }) => {
               <div className="section_subtitle">AI Driven Strategies</div>
             </div>
           </div>
-          <div className="row">
+          {/* <div className="row">
             <div className="col-12">
               <div className="faq-list">
                 <div className="floating-menu">
@@ -618,13 +621,70 @@ const SectionSpace = ({ isLogin }) => {
                 </div>
               </div>
             </div>
+          </div> */}
+          <div className="transaction-tab-bg-style">
+            <div className="row justify-content-md-center justify-content-left scrollar-tab">
+              <div className="col-12 tabs-content">
+                <div className="d-flex justify-content-md-center justify-content-left">
+                  <div
+                    className={
+                      selectedPortfolio === "all"
+                        ? "transact-active-tab tabs-text-style"
+                        : " tabs-text-style"
+                    }
+                    onClick={handleClick("all")}
+                  >
+                    All Portfolios
+                  </div>
+                  <div
+                    className={
+                      selectedPortfolio === "multi-bagger"
+                        ? "tabs-text-style transact-active-tab"
+                        : "tabs-text-style"
+                    }
+                    onClick={handleClick("multi-bagger")}
+                  >
+                    Multi-Bagger
+                  </div>
+                  <div
+                    className={
+                      selectedPortfolio === "aggressive"
+                        ? "tabs-text-style transact-active-tab"
+                        : "tabs-text-style"
+                    }
+                    onClick={handleClick("aggressive")}
+                  >
+                    Aggressive
+                  </div>
+                  <div
+                    className={
+                      selectedPortfolio === "moderate"
+                        ? "tabs-text-style transact-active-tab"
+                        : "tabs-text-style"
+                    }
+                    onClick={handleClick("moderate")}
+                  >
+                    Moderate
+                  </div>
+                  <div
+                    className={
+                      selectedPortfolio === "conservative"
+                        ? "tabs-text-style transact-active-tab"
+                        : "tabs-text-style"
+                    }
+                    onClick={handleClick("conservative")}
+                  >
+                    Conservative
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="row mt-3">
             <div className="col-12">
               {/* <h3>{portfolioData[selectedPortfolio].title}</h3> */}
               {portfolioData[selectedPortfolio].content}
-
-              <section className="sub-sectionspace">
+              {/* <section className="sub-sectionspace">
                 <div className="container bg-primary innerspace">
                   <div className="row  ">
                     <div className="col-12 col-md-6">
@@ -658,11 +718,11 @@ const SectionSpace = ({ isLogin }) => {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
               <section className="sub-sectionspace">
                 <div className="container bg-secondary innerspace">
                   <div className="row  ">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-6 order-md-1 order-2">
                       <div className="section-header mt-0">
                         <div className="section_title">
                           Using MarketsMojo? This Could Be Your Perfect Match!

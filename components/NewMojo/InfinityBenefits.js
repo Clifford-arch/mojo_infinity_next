@@ -9,12 +9,12 @@ const InfinityBenefits = () => {
             <div className="section-header mt-0">
               <div className="section_title">
                 {" "}
-                What will you enjoy as an Infinity Member
+                Why Become an Infinity Member
               </div>
             </div>
           </div>
         </div>
-        <div className="row col-12 col-md-12 col-lg-8 mx-auto py-4">
+        <div className="row col-12 col-md-12 col-lg-10 mx-auto py-md-4 py-0">
           <div className="col-4 col-md-4">
             <div className="hero-row">
               <img

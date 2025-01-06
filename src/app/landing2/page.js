@@ -29,15 +29,15 @@ const Landing2 = () => {
                 <h6> Reimagined for Superior Results!</h6>
                 <img
                   src="https://sandbox-st.mojowealth.in/images/home/infinity-icon.png"
-                  width="70px"
+                  width="60px"
                   className="img-fluid my-3"
                   alt="infinity-icon.png"
                 />
-                <p className="col-md-8 mx-auto">
-                  Your Launchpad to Achieving High Net Worth and Financial
-                  Prosperity
+                <p className="col-md-10 mx-auto ">
+                  Invest in our Infinity Portfolios and we’ll help you manage it
+                  to grow you
                 </p>
-                <div className="row col-md-12 col-lg-8 mx-auto pt-4">
+                <div className="row col-md-12 col-lg-10 mx-auto pt-4">
                   <div className="col-4">
                     <div className="hero-row">
                       <img

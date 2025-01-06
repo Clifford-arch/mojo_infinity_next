@@ -16,7 +16,7 @@ const RegBanner = ({ isLogin }) => {
     <section className="">
       <div className="container p-0 m-0">
         <div className="row portfolio-assessment bg-secondary">
-          <div className="col-12 col-md-4 order-lg-2">
+          <div className="col-12 col-md-4 order-lg-2 graph-image text-md-end text-left pt-md-0 pt-3">
             <img
               src="https://sandbox-st.mojowealth.in/images/home/pregraph.png"
               className="img-fluid"
@@ -25,9 +25,9 @@ const RegBanner = ({ isLogin }) => {
           </div>
           <div className="col-12 col-md-8 text-center text-md-start order-lg-1">
             <div className="section_title1">
-              Register and Assess Your Risk Profile in 5 Minutes!
+              Complete KYC, Assess Your Risk, and Start Investing in Minutes!
             </div>
-            <div className="mt-3">
+            <div className="mt-3 mb-2">
               <button
                 type="button"
                 className="btn btn-primary"

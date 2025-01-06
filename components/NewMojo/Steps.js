@@ -26,7 +26,7 @@ const Steps = ({ isLogin }) => {
           <div className="col-12 col-xl-12 py-2 order-status-bar">
             <ol className="steps">
               <li className="doing">
-                <div>
+                <div className="pt-2">
                   Sign up and KYC <br />
                   <span className="text-small">
                     {" "}
@@ -35,7 +35,7 @@ const Steps = ({ isLogin }) => {
                 </div>
               </li>
               <li className="doing">
-                <div>
+                <div className="pt-2">
                   Choose a Portfolio <br />
                   <span className="text-small">
                     Explore our products and find the most suitable one
@@ -43,7 +43,7 @@ const Steps = ({ isLogin }) => {
                 </div>
               </li>
               <li className="doing">
-                <div>
+                <div className="pt-2">
                   Invest In a Click <br />
                   <span className="text-small">And watch your wealth grow</span>
                 </div>
@@ -51,7 +51,7 @@ const Steps = ({ isLogin }) => {
             </ol>
           </div>
         </div>
-        <div className="mt-3 text-center">
+        <div className="mt-3 text-center pt-4">
           <button
             type="button"
             className="btn btn-primary"
