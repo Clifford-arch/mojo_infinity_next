@@ -80,7 +80,7 @@
 .steps{width:100%;display:table;margin-top:-15px!important;}
 .steps li{counter-increment:num-sections;text-align:center;line-height:20px;display:table-cell;padding:10px 0 25px;position:relative;border-bottom:1px dashed #D1D5DB;font-size:18px;font-weight:700;width:1%;}
 .steps li span{color:#676879;font-size:12px;line-height:12px !important;font-weight:500;top:5px;position:relative;}
-.steps li:after{content:"\F293";font-family:bootstrap-icons;position:absolute;bottom:-15px;left:0;margin:auto;width:30px;height:30px;line-height:30px;background:#4B79E6;color:#fff;border-radius:60%;z-index:2;font-size:20px;text-align:center;}
+.steps li:after{content:"\F293";font-family:bootstrap-icons;position:absolute;bottom:-15px;left:0;margin:25px 0px 0px 0px;width:30px;height:30px;line-height:30px;background:#4B79E6;color:#fff;border-radius:60%;z-index:2;font-size:20px;text-align:center;}
 .steps li.doing:before,.steps li:first-child:before,.steps li:last-child:before{content:"";position:absolute;z-index:1;bottom:-4px;left:0;height:4px;background:#fff;}
 .steps li.doing:before,.steps li:first-child:before{left:0;}
 .steps li div{position:absolute;top:calc(100% + 20px);width:60%;left:-70px;}
