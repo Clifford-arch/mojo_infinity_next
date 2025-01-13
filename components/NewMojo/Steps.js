@@ -27,31 +27,31 @@ const Steps = ({ isLogin }) => {
             <ol className="steps">
               <li className="doing">
                 <div className="pt-2">
-                  Sign up and KYC <br />
+                Register & Choose Your Portfolio <br />
                   <span className="text-small">
                     {" "}
-                    Tell us about you and do a risk profile
+                    Sign up and explore our range of portfolios tailored to your goals and risk appetite.
                   </span>
                 </div>
               </li>
               <li className="doing">
                 <div className="pt-2">
-                  Choose a Portfolio <br />
+                Complete KYC & E-Sign Agreement <br />
                   <span className="text-small">
-                    Explore our products and find the most suitable one
+                  Verify your details, complete your KYC, and e-sign seamlessly.
                   </span>
                 </div>
               </li>
               <li className="doing">
                 <div className="pt-2">
-                  Invest In a Click <br />
-                  <span className="text-small">And watch your wealth grow</span>
+                Complete Payment & Invest in a Click <br />
+                  <span className="text-small">Pay securely to generate your portfolio and start building your wealth.</span>
                 </div>
               </li>
             </ol>
           </div>
         </div>
-        <div className="mt-3 text-center pt-4">
+        <div className="mt-md-5 text-center pt-4">
           <button
             type="button"
             className="btn btn-primary"

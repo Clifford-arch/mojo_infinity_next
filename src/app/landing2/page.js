@@ -7,6 +7,7 @@ import Steps from "../../../components/NewMojo/Steps";
 import InfinityBenefits from "../../../components/NewMojo/InfinityBenefits";
 import { useAuth } from "../../../api/AuthContext";
 import SectionSpace from "../../../components/NewMojo/SectionSpace";
+import SectionSpace1 from "../../../components/NewMojo/SectionSpace1";
 
 const Landing2 = () => {
   const { isLogin } = useAuth();
@@ -35,7 +36,7 @@ const Landing2 = () => {
                 />
                 <p className="col-md-10 mx-auto ">
                   Invest in our Infinity Portfolios and we’ll help you manage it
-                  to grow you
+                  to grow your wealth
                 </p>
                 <div className="row col-md-12 col-lg-10 mx-auto pt-4">
                   <div className="col-4">
@@ -74,7 +75,8 @@ const Landing2 = () => {
           </div>
         </section>
         <RegBanner isLogin={isLogin} />
-        <SectionSpace isLogin={isLogin} />
+        {/* <SectionSpace isLogin={isLogin} /> */}
+        <SectionSpace1 isLogin={isLogin}/>
         <Steps isLogin={isLogin} />
         <InfinityBenefits />
       </main>
