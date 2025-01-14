@@ -4,39 +4,35 @@ const Footer = () => {
   return (
     <div className="container-fluid p-0">
       <footer className="text-center text-white mt-5">
-        <section className="" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
-          <div className="container-fluid py-4">
-            <div className="row text-center">
-              <p>
-                <b>Name:</b> InfinHub Market Technologies FZ-LLC​
-              </p>
-              <p>
-                <b>Address:</b> InfinHub Market Technologies FZ-LLC, Building-2,
-                Unit 112, Dubai Internet City, Dubai, United Arab Emirates
-              </p>
-              <p>
-                <b>E-mail:</b>
-                <a href="mailto:compliance@marketsmojo.com">
-                  compliance&#64;marketsmojo.com​
-                </a>{" "}
-                ​
-              </p>
-              <p>
-                <b>Email:</b>
-                <a href="mailto:support@marketsmojo.com">
-                  support&#64;marketsmojo.com
-                </a>
-                ​
-              </p>
-              <p>
-                {" "}
-                “Investment in securities market are subject to market risks.
-                Read all the related documents carefully before investing.”
-              </p>
-            </div>{" "}
+        <section className="py-4">
+          <div className="row text-center">
+            <p>
+              <b>Name:</b> MOJO Markets Private Limited (Investment Advisors)
+              (SEBI Registration No. INA000012528) (CIN: U74900MH2015PTC264951)
+            </p>
+            <p>
+              <b>Correspondence Address:</b> Benefice Business House, Office No.
+              3B, 3rd Floor, C.S. 242, Mathuradas Mills Estate, N.M. Joshi Marg,
+              Tulsi Pipe Road, Lower Parel West, Mumbai- 400013
+            </p>
+            <p>
+              <b>Registered Address:</b> 201 Garnet, Nirmal Lifestyle, LBS Road,
+              Mulund (W) Mumbai- 400080.
+            </p>
+            <p>
+              For queries or grievances, please contact us on{" "}
+              <a href="mailto:support@mojowealth.in">support@mojowealth.in</a>,
+              Phone: 022 - 69744102
+            </p>
+            <p>
+              “Investments in securities market are subject to market risks.
+              Read all the related documents carefully before investing.
+              Registration granted by SEBI and certification from NISM in no way
+              guarantee performance of the intermediary or provide any assurance
+              of returns to investors.”
+            </p>
           </div>
         </section>
-
         <div className="footer-menu-wrapper">
           <div>
             <div className="footer-menu">
@@ -45,16 +41,16 @@ const Footer = () => {
                   <a href="#"> Contact Us</a>
                 </li>
                 <li>
-                  <a href="#"> Privacy Policy</a>
+                  <a href="/user/privacy-policy"> Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#"> Refund Policy</a>
+                  <a href="/user/refund-policy"> Refund Policy</a>
                 </li>
                 <li>
-                  <a href="#">Disclaimers</a>
+                  <a href="/user/disclaimer">Disclaimers</a>
                 </li>
                 <li>
-                  <a href="#">Terms of Use</a>
+                  <a href="/user/termsofuse">Terms of Use</a>
                 </li>
                 <li>
                   <a href="#">Regulatory Information</a>

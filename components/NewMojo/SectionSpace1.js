@@ -162,7 +162,7 @@ const SectionSpace1 = ({ isLogin }) => {
                         <div className="info row mb-3">
                           <div className="col-4 col-md-4  ">
                             <div className="head">Min. Investment</div>
-                            <div className="value text-left text-bold">
+                            <div className="value text-left ">
                               25,00,000
                             </div>
                           </div>
