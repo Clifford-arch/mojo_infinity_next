@@ -48,7 +48,9 @@ const SectionSpace1 = ({ isLogin }) => {
                     className={`tabs-text-style ${
                       activeTab === "multiBagger" ? "transact-active-tab" : ""
                     }`}
-                    onClick={() => handleTabClick(multiBaggerRef, "multiBagger")}
+                    onClick={() =>
+                      handleTabClick(multiBaggerRef, "multiBagger")
+                    }
                   >
                     Multi Bagger Equity Portfolio
                   </div>
@@ -97,11 +99,11 @@ const SectionSpace1 = ({ isLogin }) => {
                           <div className="info row mb-3">
                             <div className="col-4 col-md-3 ps-0">
                               <div className="head">Min. Investment</div>
-                              <div className="value">2,00,000</div>
+                              <div className="value">25,00,000</div>
                             </div>
                             <div className="col-5 col-md-4">
                               <div className="head">No. of Stocks</div>
-                              <div className="value">10-15</div>
+                              <div className="value">10</div>
                             </div>
                             <div className="col-3 col-md-3">
                               <div className="head">3 Year CAGR</div>
@@ -121,7 +123,7 @@ const SectionSpace1 = ({ isLogin }) => {
                           className="btn btn-primary"
                           onClick={handleButtonClick}
                         >
-                         Get Started
+                          Get Started
                         </button>
                       </div>
                       <div className="col-12 col-md-4 wealth-basket-btn d-md-block d-none">
@@ -150,12 +152,27 @@ const SectionSpace1 = ({ isLogin }) => {
                           Using MarketsMojo? This Could Be Your Perfect Match!
                         </div>
                       </div>
-                      <p>
-                        Choose from our powerful strategies - Mojo Stocks,
-                        Reliable Performers, Hidden Turnarounds, and Momentum
-                        Now - customize their weightage, and get the perfect mix
-                        to generate alpha.
-                      </p>
+                      <div>
+                        <p>
+                          Choose from our powerful strategies - Mojo Stocks,
+                          Reliable Performers, Hidden Turnarounds, and Momentum
+                          Now - customize their weightage, and get the perfect
+                          mix to generate alpha.
+                        </p>
+                        <div className="info row mb-3">
+                          <div className="col-4 col-md-4  ">
+                            <div className="head">Min. Investment</div>
+                            <div className="value text-left text-bold">
+                              25,00,000
+                            </div>
+                          </div>
+                          <div className="col-5 col-md-4 ">
+                            <div className="head">No. of Stocks</div>
+                            <div className="value">10</div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div className="mt-3">
                         <button
                           type="button"

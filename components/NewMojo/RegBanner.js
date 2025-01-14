@@ -39,17 +39,22 @@ const RegBanner = ({ isLogin }) => {
           </div>
         </div> */}
         <div className="row">
-        <div className="col-12">
-          <div className="portfolio-assessment bg-secondary justify-content-between px-4 py-2">
-            <div className="pt-0">
-              Complete Your KYC, Assess Your Risk, and Start Investing in Minutes!
+          <div className="col-12">
+            <div className="portfolio-assessment bg-secondary justify-content-between px-4 py-2">
+              <div className="pt-0">
+                Complete Your KYC, Assess Your Risk, and Start Investing in
+                Minutes!
+              </div>
+              <button
+                type="button"
+                className="btn btn btn-md btn-primary "
+                onClick={handleButtonClick}
+              >
+                Get Started
+              </button>
             </div>
-            <button type="button" className="btn btn btn-md btn-primary ">
-              Get Started
-            </button>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );
