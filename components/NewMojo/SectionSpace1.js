@@ -147,7 +147,7 @@ const SectionSpace1 = ({ isLogin }) => {
                 <div className="container bg-secondary innerspace">
                   <div className="row">
                     <div className="col-12 col-md-6">
-                      <div className="section-header mt-0">
+                      <div className="section-header mt-0 mb-3">
                         <div className="section_title">
                           Using MarketsMojo? This Could Be Your Perfect Match!
                         </div>
@@ -160,13 +160,11 @@ const SectionSpace1 = ({ isLogin }) => {
                           mix to generate alpha.
                         </p>
                         <div className="info row mb-3">
-                          <div className="col-4 col-md-4  ">
+                          <div className="col-6 col-md-4  ">
                             <div className="head">Min. Investment</div>
-                            <div className="value text-left ">
-                              25,00,000
-                            </div>
+                            <div className="value text-left ">25,00,000</div>
                           </div>
-                          <div className="col-5 col-md-4 ">
+                          <div className="col-6 col-md-4 ">
                             <div className="head">No. of Stocks</div>
                             <div className="value">10</div>
                           </div>

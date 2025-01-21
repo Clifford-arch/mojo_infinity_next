@@ -22,7 +22,7 @@ const Landing2 = () => {
   return (
     <div className="container">
       <main className="spacing-top mt-5 pt-1">
-        <section className="heroBanner sectionspace">
+        <section className="heroBanner sectionspace pre-login-space">
           <div className="container p-0">
             <div className="row text-center">
               <div className="col-12">
@@ -76,7 +76,7 @@ const Landing2 = () => {
         </section>
         <RegBanner isLogin={isLogin} />
         {/* <SectionSpace isLogin={isLogin} /> */}
-        <SectionSpace1 isLogin={isLogin}/>
+        <SectionSpace1 isLogin={isLogin} />
         <Steps isLogin={isLogin} />
         <InfinityBenefits />
       </main>

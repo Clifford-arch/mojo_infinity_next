@@ -41,7 +41,7 @@ const RegBanner = ({ isLogin }) => {
         <div className="row">
           <div className="col-12">
             <div className="portfolio-assessment bg-secondary justify-content-between px-4 py-2">
-              <div className="pt-0">
+              <div className="pt-lg-0 pt-2">
                 Complete Your KYC, Assess Your Risk, and Start Investing in
                 Minutes!
               </div>

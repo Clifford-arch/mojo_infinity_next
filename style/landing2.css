@@ -446,8 +446,35 @@
 .graph-image img {
   width: 15rem;
 }
+/* @media only screen and(min-device-width:768px) and(max-device-width: 820px) {
+  .steps-space {
+    margin-top: 121px !important;
+  }
+} */
+
+@media (min-width: 768px) and (max-width: 820px) {
+  .steps-space {
+    margin-top: 121px !important;
+  }
+  .order-status-bar ol {
+    width: 100%;
+  }
+  .hero-row {
+    height: 100% !important;
+    font-size: 14px;
+  }
+}
 
 @media screen and (max-width: 767px) {
+  .pre-login-space {
+    padding-top: 28px;
+  }
+  .wealth-basket .title .tag {
+    font-size: 14px !important;
+  }
+  .steps li span {
+    line-height: normal !important;
+  }
   .scrollar-tab {
     width: 100%;
     margin: auto;
@@ -476,7 +503,7 @@
   }
   .portfolio-assessment button {
     margin-top: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 9px;
     width: 100%;
   }
   .tabs-text-style {
@@ -524,7 +551,7 @@
     font-size: 30px;
   }
   .heroBanner p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: normal;
   }
   W
@@ -603,7 +630,7 @@
     border-radius: 10px;
   }
   .portfolio-assessment {
-    font-size: 12px;
+    font-size: 14px;
   }
   .mp-card .card-body {
     padding: 10px;
